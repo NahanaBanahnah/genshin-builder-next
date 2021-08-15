@@ -14,6 +14,10 @@ const Character = props => {
 	if (STATE.stat) {
 		CLASS.push('fade')
 	}
+	let hide = props.hide ? 'hide' : 'show'
+	CLASS.push(hide)
+
+	const IMG = `/img/characters/${props.id}.webp`
 
 	return (
 		<div className={CLASS.join(' ')}>
@@ -21,12 +25,14 @@ const Character = props => {
 			<div className="character">
 				<div className="bg">
 					<Image
-						src={`/img/characters/${props.id}.webp`}
+						src={IMG}
 						layout="fill"
 						objectFit="cover"
 						alt={props.id}
 						quality={100}
 						objectPosition="top"
+						placeholder="blur"
+						blurDataURL={`/_next/image?url=${IMG}&w=16&q=1`}
 					/>
 				</div>
 				<h1>{props.name}</h1>

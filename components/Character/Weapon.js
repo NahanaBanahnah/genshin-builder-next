@@ -12,15 +12,18 @@ const Weapon = props => {
 		5: 'five',
 	}
 
+	let IMG = `/img/weapons/${props.id}.webp`
 	return (
 		<>
 			<Image
-				src={`/img/weapons/${props.id}.webp`}
+				src={IMG}
 				alt={props.id}
 				width={50}
 				height={50}
 				layout="responsive"
 				objectFit="contain"
+				placeholder="blur"
+				blurDataURL={`/_next/image?url=${IMG}&w=16&q=1`}
 			/>
 			<div className={`${rate[WEAPON.rating]}-star`}>{name}</div>
 		</>
