@@ -68,6 +68,9 @@ div.main {
 		}
 	}
 }
+div.main.hide {
+	display: none;
+}
 div.main:hover {
 	div.character {
 		.bg {
@@ -82,6 +85,15 @@ div.fade {
 	div.stats {
 		color: rgba(#efefef, 0.3);
 	}
+}
+img {
+	transition: opacity 0.25s ease-in-out;
+}
+img.hide {
+	opacity: 0;
+}
+img.show {
+	opacity: 1;
 }
 
 $elements: (
@@ -134,24 +146,26 @@ div.weapons {
 	align-items: center;
 	align-content: center;
 	padding-left: 16px;
+	gap: 4px;
 
-	div.image {
-		background-color: #75a5b7;
-		position: relative;
-		height: 100%;
+	img {
+		width: 48px;
+		height: 48px;
 	}
 }
 
 div.artifacts {
 	display: grid;
-	grid-template-columns: 52px 1fr;
+	grid-template-columns: 48px 1fr;
 	grid-auto-rows: 48px;
 	align-items: center;
 	align-content: center;
 	padding-left: 16px;
+	gap: 4px;
 
 	img {
-		width: 42px;
+		width: 48px;
+		height: 48px;
 	}
 }
 

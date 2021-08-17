@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import Image from 'next/image'
 
 import { GlobalStateContext } from '../../context/GlobalContextProvider'
 
@@ -8,9 +9,11 @@ const Stats = props => {
 	const STATE = useContext(GlobalStateContext)
 
 	let title = props.artifact ? (
-		<img
-			src={`./img/artifacts/${props.artifact}.png`}
+		<Image
+			src={`/img/artifacts/${props.artifact}.png`}
 			alt={props.artifact}
+			width={48}
+			height={48}
 		/>
 	) : (
 		props.stat
