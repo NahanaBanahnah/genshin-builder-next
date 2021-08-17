@@ -10,16 +10,21 @@ const Reducer = (state, action) => {
 				...state,
 				stat: action.payload,
 			}
-            case 'SET_CHARACTER':
-                return {
-                    ...state,
-                    character: action.payload,
-                } 
-        case 'SET_FILTER' :
-            return {
-                ...state,
-                filtered: action.payload
-            }                            
+		case 'SET_CHARACTER':
+			return {
+				...state,
+				character: action.payload,
+			}
+		case 'SET_FILTER':
+			return {
+				...state,
+				filtered: action.payload,
+			}
+		case 'SET_BUILD':
+			return {
+				...state,
+				build: action.payload,
+			}
 
 		default:
 			return state

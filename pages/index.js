@@ -4,7 +4,7 @@ import {
 	GlobalStateContext,
 } from '../context/GlobalContextProvider'
 
-import Character from '../components/Character/Character'
+import Build from '../components/Build/Build'
 import Select from '../components/Select'
 
 import Artifacts from '../data/artifacts'
@@ -57,31 +57,6 @@ const Home = () => {
 		dispatch({ type: 'SET_STAT', payload: value })
 	}
 
-	useEffect(() => {
-		let array = [...Characters]
-		setCharsState(array)
-
-		if (STATE.character) {
-			array = array.filter(ele => ele.id === STATE.character)
-			setCharsState(array)
-		}
-
-		if (STATE.artifact) {
-			array = array.filter(ele =>
-				ele.artifact.some(g => g.id === STATE.artifact)
-			)
-			setCharsState(array)
-		}
-
-		if (STATE.stat) {
-			array = array.filter(ele => {
-				return ele[STATE.stat.type].some(g => g === STATE.stat.stat)
-			})
-			setCharsState(array)
-		}
-	}, [STATE, dispatch])
-
-	const [CHARS, setCharsState] = useState(characterArray)
 	return (
 		<>
 			<Head>
@@ -131,9 +106,9 @@ const Home = () => {
 						/>
 					</div>
 				</nav>
-				{CHARS.map((character, index) => {
+				{characterArray.map((character, index) => {
 					return (
-						<Character
+						<Build
 							key={index}
 							name={character.name}
 							element={character.element}
