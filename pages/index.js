@@ -3,27 +3,47 @@ import {
 	GlobalDispatchContext,
 	GlobalStateContext,
 } from '../context/GlobalContextProvider'
+import ReactTooltip from 'react-tooltip'
 
 import Build from '../components/Build/Build'
 import Select from '../components/Select'
 
 import Artifacts from '../data/artifacts'
 import Stats from '../data/stats'
+import Builds from '../data/builds'
 import Characters from '../data/characters'
 
 import Head from 'next/head'
 
 const Home = () => {
+	let locals = {}
+	let local = Object.values(Characters).map(e => {
+		return e.ascend.common
+	})
+	local = local.filter((v, i, a) => a.indexOf(v) === i)
+	local = local.map(e => {
+		let name = e ? e.replace('_', ' ') : null
+		name = name ? name[0].toUpperCase() + name.slice(1) : null
+
+		locals[e] = {
+			1: name,
+			2: name,
+			3: name,
+		}
+	})
+
+	locals = JSON.stringify(locals, null, 2)
+
 	// GLOBAL STATE
 	const dispatch = useContext(GlobalDispatchContext)
 	const STATE = useContext(GlobalStateContext)
 
 	// BUILD ARRAYS
-	let characterArray = [...Characters]
+	let buildArray = [...Builds]
 
 	// BUILD CHARACTER OPTIONS
 	let characterOptions = []
-	characterArray.map(x =>
+	buildArray.map(x =>
 		characterOptions.filter(a => a.id === x.id).length > 0
 			? null
 			: characterOptions.push(x)
@@ -106,7 +126,13 @@ const Home = () => {
 						/>
 					</div>
 				</nav>
-				{characterArray.map((character, index) => {
+				<ReactTooltip
+					effect="solid"
+					place="bottom"
+					backgroundColor="#d2ab76"
+				/>
+				{/* <pre>{locals}</pre> */}
+				{buildArray.map((character, index) => {
 					return (
 						<Build
 							key={index}

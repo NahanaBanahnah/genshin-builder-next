@@ -1,0 +1,66 @@
+@use 'sass:math';
+
+$ratio: 1.21;
+$ratioCrop: 0.83;
+$small: 38;
+$med: 44;
+$large: 112;
+
+$sizes: (
+	'small': $small,
+	'med': 84px,
+	'large': 112px,
+);
+
+:export {
+	ratio: $ratio;
+	ratioCrop: $ratioCrop;
+	smallPx: $small;
+	med: $med;
+	large: $large;
+}
+
+div.card {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 8px 8px;
+}
+div.imageHolder {
+	position: relative;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+@each $name, $size in $sizes {
+	div.card.#{$name} {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+
+		h2 {
+			font-size: 0.9em;
+			font-weight: 300;
+		}
+		div.imageHolder {
+			width: $size + px;
+			height: math.round($size * $ratio) + px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			div.image {
+				position: absolute;
+				align-self: center;
+				width: $size - 12px;
+				height: math.round(($size - 8) * $ratioCrop) + px;
+			}
+		}
+	}
+	div.card.#{$name}.noQty {
+		div.imageHolder {
+			align-items: flex-start;
+			height: math.round($size * $ratioCrop) + px;
+		}
+	}
+}

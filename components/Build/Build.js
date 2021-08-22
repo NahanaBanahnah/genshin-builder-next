@@ -4,11 +4,14 @@ import { motion } from 'framer-motion'
 
 import { GlobalStateContext } from '../../context/GlobalContextProvider'
 
+import Characters from '../../data/characters'
+
 import Artifacts from './Artifacts'
 import Stats from './Stats'
 import Weapons from './Weapons'
+import Ascend from './Ascend'
 
-const Character = props => {
+const Build = props => {
 	const STATE = useContext(GlobalStateContext)
 	const CLASS = ['main', props.element]
 
@@ -34,7 +37,6 @@ const Character = props => {
 
 		if (STATE.stat) {
 			stat = props[STATE.stat.type].find(e => e === STATE.stat.stat)
-			console.log(stat)
 		}
 
 		setHide(!artifact || !character || !stat ? true : false)
@@ -44,7 +46,9 @@ const Character = props => {
 
 	return (
 		<div className={CLASS.join(' ')}>
-			<div className="build">{props.build}</div>
+			<div className="build">
+				<h1>{props.build}</h1>
+			</div>
 			<div className="character">
 				<div className="bg">
 					<Image
@@ -60,7 +64,6 @@ const Character = props => {
 						onLoad={() => setLoaded(true)}
 					/>
 				</div>
-				<h1>{props.name}</h1>
 			</div>
 			<Weapons weapons={props.weapon} />
 			<Artifacts artifact={props.artifact} />
@@ -68,8 +71,12 @@ const Character = props => {
 			<Stats artifact="glass" stats={props.glass} />
 			<Stats artifact="crown" stats={props.crown} />
 			<Stats stat="Sub Stats" stats={props.subStats} />
+			<div className="characterName">
+				<h1>{props.name}</h1>
+			</div>
+			<Ascend ascend={Characters[props.id].ascend} />
 		</div>
 	)
 }
 
-export default Character
+export default Build
