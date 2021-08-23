@@ -15,7 +15,7 @@ const Ascend = props => {
 
 	return (
 		<div className="ascendCards">
-			{/* <h3>Materials</h3> */}
+			<h3>Materials</h3>
 			<Card
 				type="local"
 				id={local}
