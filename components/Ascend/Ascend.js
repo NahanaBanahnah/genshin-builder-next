@@ -14,8 +14,8 @@ const Ascend = props => {
 	let common = props.ascend.common
 
 	return (
-		<div className="ascend">
-			<h3>Ascension Material</h3>
+		<div className="ascendCards">
+			{/* <h3>Materials</h3> */}
 			<Card
 				type="local"
 				id={local}

@@ -6,7 +6,7 @@ import {
 import ReactTooltip from 'react-tooltip'
 
 import Build from '../components/Build/Build'
-import Select from '../components/Select'
+import Select from '../components/Select/Select'
 
 import Artifacts from '../data/artifacts'
 import Stats from '../data/stats'
@@ -129,7 +129,7 @@ const Home = () => {
 				<ReactTooltip
 					effect="solid"
 					place="bottom"
-					backgroundColor="#d2ab76"
+					backgroundColor="#202020"
 				/>
 				{/* <pre>{locals}</pre> */}
 				{buildArray.map((character, index) => {

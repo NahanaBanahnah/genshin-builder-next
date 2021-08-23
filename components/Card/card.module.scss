@@ -2,7 +2,7 @@
 
 $ratio: 1.21;
 $ratioCrop: 0.83;
-$small: 38;
+$small: 36;
 $med: 44;
 $large: 112;
 
@@ -24,11 +24,11 @@ div.card {
 	position: relative;
 	display: flex;
 	align-items: center;
-	padding: 8px 8px;
+	padding: 8px 4px;
 }
 div.imageHolder {
 	position: relative;
-	border-radius: 8px;
+	border-radius: 4px;
 	overflow: hidden;
 }
 
@@ -38,13 +38,9 @@ div.imageHolder {
 		flex-direction: column;
 		align-content: center;
 
-		h2 {
-			font-size: 0.9em;
-			font-weight: 300;
-		}
 		div.imageHolder {
 			width: $size + px;
-			height: math.round($size * $ratio) + px;
+			height: $size;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -52,8 +48,8 @@ div.imageHolder {
 			div.image {
 				position: absolute;
 				align-self: center;
-				width: $size - 12px;
-				height: math.round(($size - 8) * $ratioCrop) + px;
+				width: $size - 8px;
+				height: $size - 8px;
 			}
 		}
 	}

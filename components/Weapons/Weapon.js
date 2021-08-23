@@ -21,8 +21,8 @@ const Weapon = props => {
 				className={imgClass}
 				src={IMG}
 				alt={props.id}
-				width={50}
-				height={50}
+				width={48}
+				height={48}
 				placeholder="blur"
 				blurDataURL={`/_next/image?url=${IMG}&w=32&q=10`}
 				onLoad={() => setLoaded(true)}
