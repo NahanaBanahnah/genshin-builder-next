@@ -6,10 +6,10 @@ import { GlobalStateContext } from '../../context/GlobalContextProvider'
 
 import Characters from '../../data/characters'
 
-import Artifacts from './Artifacts'
-import Stats from './Stats'
-import Weapons from './Weapons'
-import Ascend from './Ascend'
+import Artifacts from '../Artifacts/Artifacts'
+import Stats from '../Stats/Stats'
+import Weapons from '../Weapons/Weapons'
+import Ascend from '../Ascend/Ascend'
 
 const Build = props => {
 	const STATE = useContext(GlobalStateContext)
@@ -72,9 +72,11 @@ const Build = props => {
 			<Stats artifact="crown" stats={props.crown} />
 			<Stats stat="Sub Stats" stats={props.subStats} />
 			<div className="characterName">
-				<h1>{props.name}</h1>
+				<h2>{props.name}</h2>
 			</div>
-			<Ascend ascend={Characters[props.id].ascend} />
+			<div className="ascend">
+				<Ascend ascend={Characters[props.id].ascend} />
+			</div>
 		</div>
 	)
 }
