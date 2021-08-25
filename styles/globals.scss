@@ -47,7 +47,7 @@ div.main {
 		justify-content: center;
 		position: relative;
 		overflow: hidden;
-		height: 176px;
+		min-height: 176px;
 
 		.bg {
 			background-size: cover;
@@ -260,5 +260,9 @@ nav {
 		align-items: center;
 		height: 64px;
 		justify-content: flex-start;
+
+		div.field {
+			margin: 0px 16px;
+		}
 	}
 }

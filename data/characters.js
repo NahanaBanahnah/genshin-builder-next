@@ -300,6 +300,8 @@ module.exports = {
 		},
 	},
 	sayu: {
+		id: 'sayu',
+		name: 'Sayu',
 		ascend: {
 			local: 'crystal_marrow',
 			gem: 'vayuda_turquoise',
@@ -416,6 +418,8 @@ module.exports = {
 		},
 	},
 	yoimiya: {
+		id: 'yoimiya',
+		name: 'Yoimiya',
 		ascend: {
 			local: 'naku_weed',
 			gem: 'agnidus_agate',
