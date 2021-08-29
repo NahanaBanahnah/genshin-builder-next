@@ -3,7 +3,7 @@ import {
 	GlobalDispatchContext,
 	GlobalStateContext,
 } from '../context/GlobalContextProvider'
-import ReactTooltip from 'react-tooltip'
+// import ReactTooltip from 'react-tooltip'
 
 import Nav from '../components/Nav/Nav'
 import Build from '../components/Build/Build'
@@ -45,11 +45,6 @@ const Home = () => {
 				<title>Genshin Builder</title>
 			</Head>
 			<main>
-				<ReactTooltip
-					effect="solid"
-					place="bottom"
-					backgroundColor="#202020"
-				/>
 				<Nav />
 				{/* <pre>{locals}</pre> */}
 				{buildArray.map((character, index) => {

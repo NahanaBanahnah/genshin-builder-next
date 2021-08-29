@@ -1,6 +1,5 @@
-import { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext, useEffect, useRef } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 
 import { GlobalStateContext } from '../../context/GlobalContextProvider'
 
@@ -13,15 +12,46 @@ import Ascend from '../Ascend/Ascend'
 
 const Build = props => {
 	const STATE = useContext(GlobalStateContext)
-	const CLASS = ['main', props.element]
 
+	// ========== Set Up Windowing
+	const REF = useRef(null)
+	const [IS_VISIBLE, setIsVisible] = useState(true)
+
+	// ========== Image Loading
 	const IMG = `/img/characters/${props.id}.webp`
-	const [HIDE, setHide] = useState(false)
-	let hideClass = HIDE ? 'hide' : 'show'
+	const [IMG_LOADED, setLoaded] = useState(false)
+	let imgClass = IMG_LOADED ? 'show' : 'hide'
 
-	const [LOADED, setLoaded] = useState(false)
-	let imgClass = LOADED ? 'show' : 'hide'
+	// ====== Set the class and set up filtering
+	const CLASS = ['main', props.element]
+	const [FILTERED, setFilter] = useState(false)
 
+	//CB for windowing
+	const VIS_CALLBACK = entries => {
+		const [ENTRY] = entries
+		if (ENTRY.intersectionRatio <= 0.5) {
+			setIsVisible(false)
+		} else {
+			setIsVisible(true)
+		}
+	}
+
+	//Observe windowing
+	useEffect(() => {
+		const OPTIONS = {
+			root: null,
+			rootMargin: '64px',
+			threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+		}
+		const OBSERVER = new IntersectionObserver(VIS_CALLBACK, OPTIONS)
+		if (REF.current) OBSERVER.observe(REF.current)
+
+		return () => {
+			if (REF.current) OBSERVER.unobserve(REF.current)
+		}
+	})
+
+	//Should we filter?!?
 	useEffect(() => {
 		let artifact = true
 		let character = true
@@ -39,17 +69,16 @@ const Build = props => {
 			stat = props[STATE.stat.type].find(e => e === STATE.stat.stat)
 		}
 
-		setHide(!artifact || !character || !stat ? true : false)
+		setFilter(!artifact || !character || !stat ? true : false)
 	}, [STATE, props])
 
-	CLASS.push(hideClass)
-
-	return (
-		<div className={CLASS.join(' ')}>
-			<div className="build">
+	//If its in view load html into container
+	const HTML = IS_VISIBLE ? (
+		<div className="holder" style={{ animation: `fadeIn 1s` }}>
+			<div className="build" style={{ animation: `fadeIn 1s` }}>
 				<h1>{props.build}</h1>
 			</div>
-			<div className="character">
+			<div className="character" style={{ animation: `fadeIn 1s` }}>
 				<div className="bg">
 					<Image
 						className={imgClass}
@@ -77,6 +106,13 @@ const Build = props => {
 			<div className="ascend">
 				<Ascend ascend={Characters[props.id].ascend} />
 			</div>
+		</div>
+	) : null
+
+	//no need to have the container for filtered results
+	return FILTERED ? null : (
+		<div className={CLASS.join(' ')} ref={REF}>
+			{HTML}
 		</div>
 	)
 }
