@@ -1,10 +1,36 @@
 import { useState } from 'react'
+import Tooltip from '@material-ui/core/Tooltip'
+import { makeStyles } from '@material-ui/core/styles'
+import Zoom from '@material-ui/core/Zoom'
+
 import Image from 'next/image'
 
 import styles from './card.module.scss'
 import vars from './card.module.scss'
 
 const Card = props => {
+	const useStylesBootstrap = makeStyles(theme => ({
+		arrow: {
+			color: theme.palette.grey[900],
+		},
+		tooltip: {
+			backgroundColor: theme.palette.grey[900],
+			fontSize: 12,
+			padding: 8,
+			opacity: 0.9,
+			fontFamily: 'Sora',
+		},
+	}))
+
+	const classes = useStylesBootstrap()
+
+	const TOOLTIP_OPTIONS = {
+		placement: 'bottom',
+		TransitionComponent: Zoom,
+		arrow: true,
+		classes: classes,
+	}
+
 	const [BG_LOADED, setBgLoaded] = useState(false)
 	const [LOADED, setLoaded] = useState(false)
 
@@ -21,28 +47,30 @@ const Card = props => {
 			: `/img/${props.type}/${props.id}.webp`
 
 	return (
-		<div className={cssClass.join(' ')} data-tip={props.name}>
-			<div className={styles.imageHolder}>
-				<Image
-					src={`/img/rarity/rarity_${props.rarity}.webp`}
-					alt="card"
-					width={width}
-					height={width}
-					onLoad={() => setBgLoaded(true)}
-				/>
-				<div className={styles.image}>
+		<Tooltip title={props.name} {...TOOLTIP_OPTIONS}>
+			<div className={cssClass.join(' ')} data-tip={props.name}>
+				<div className={styles.imageHolder}>
 					<Image
-						src={materialSrc}
+						src={`/img/rarity/rarity_${props.rarity}.webp`}
 						alt="card"
 						width={width}
 						height={width}
-						onLoad={() => setLoaded(true)}
+						onLoad={() => setBgLoaded(true)}
 					/>
+					<div className={styles.image}>
+						<Image
+							src={materialSrc}
+							alt="card"
+							width={width}
+							height={width}
+							onLoad={() => setLoaded(true)}
+						/>
+					</div>
 				</div>
-			</div>
 
-			{props.caption && <h2>{props.name}</h2>}
-		</div>
+				{props.caption && <h2>{props.name}</h2>}
+			</div>
+		</Tooltip>
 	)
 }
 
