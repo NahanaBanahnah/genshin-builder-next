@@ -1,49 +1,61 @@
 import { useContext } from 'react'
+import PropTypes from 'prop-types'
+
 import Image from 'next/image'
 
 import { GlobalStateContext } from '../../context/GlobalContextProvider'
 
 import StatList from '../../data/stats'
 
-const Stats = props => {
-	const STATE = useContext(GlobalStateContext)
+const Stats = ({ artifact, stats, stat }) => {
+	const { STAT_STATE } = useContext(GlobalStateContext)
 
-	let title = props.artifact ? (
+	const TITLE = artifact ? (
 		<Image
-			src={`/img/artifacts/${props.artifact}.png`}
-			alt={props.artifact}
+			src={`/img/artifacts/${artifact}.png`}
+			alt={artifact}
 			width={48}
 			height={48}
 		/>
 	) : (
-		props.stat
+		stat
 	)
 	return (
 		<div className="stats">
-			<div className="title">{title}</div>
+			<div className="title">{TITLE}</div>
 			<div>&nbsp;</div>
 
-			{props.stats.map(stat => {
-				let statClass = ['stat']
-				let index = StatList.find(e => e.id === stat)
-				let name = index ? index.name : '---'
+			{stats.map(s => {
+				const STAT_CLASS = ['stat']
+				const { name, id } = StatList.find(e => e.id === s)
 
 				if (
-					STATE.stat &&
-					STATE.stat.stat === index.id &&
-					STATE.stat.type === props.artifact
+					STAT_STATE &&
+					STAT_STATE.stat === id &&
+					STAT_STATE.type === artifact
 				) {
-					statClass.push('highlight')
+					STAT_CLASS.push('highlight')
 				}
 
 				return (
-					<div key={index.id} className={statClass.join(' ')}>
+					<div key={id} className={STAT_CLASS.join(' ')}>
 						{name}
 					</div>
 				)
 			})}
 		</div>
 	)
+}
+
+Stats.defaultProps = {
+	artifact: null,
+	stat: null,
+}
+
+Stats.propTypes = {
+	artifact: PropTypes.string,
+	stat: PropTypes.string,
+	stats: PropTypes.instanceOf(Array).isRequired,
 }
 
 export default Stats

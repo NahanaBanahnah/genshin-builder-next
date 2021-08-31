@@ -1,10 +1,10 @@
+import { createTheme, ThemeProvider } from '@material-ui/core/styles'
+import PropTypes from 'prop-types'
+
 import '../styles/globals.scss'
 import styles from '../styles/global.module.scss'
 
 import GlobalContextProvider from '../context/GlobalContextProvider'
-import { createTheme, ThemeProvider } from '@material-ui/core/styles'
-
-import green from '@material-ui/core/colors/green'
 
 const theme = createTheme({
 	palette: {
@@ -15,14 +15,17 @@ const theme = createTheme({
 	},
 })
 
-function MyApp({ Component, pageProps }) {
-	return (
-		<ThemeProvider theme={theme}>
-			<GlobalContextProvider>
-				<Component {...pageProps} />
-			</GlobalContextProvider>
-		</ThemeProvider>
-	)
+const MyApp = ({ Component }) => (
+	<ThemeProvider theme={theme}>
+		<GlobalContextProvider>
+			<Component />
+		</GlobalContextProvider>
+	</ThemeProvider>
+)
+
+MyApp.propTypes = {
+	Component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
+		.isRequired,
 }
 
 export default MyApp

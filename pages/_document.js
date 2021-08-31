@@ -1,7 +1,8 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/display-name */
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheets } from '@material-ui/styles' // works with @material-ui/core/styles, if you prefer to use it.
-// import theme from '../src/theme' // Adjust here as well
+import { ServerStyleSheets } from '@material-ui/styles'
 
 export default class MyDocument extends Document {
 	render() {

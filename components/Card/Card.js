@@ -1,14 +1,13 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 import Tooltip from '@material-ui/core/Tooltip'
 import { makeStyles } from '@material-ui/core/styles'
 import Zoom from '@material-ui/core/Zoom'
 
 import Image from 'next/image'
-
 import styles from './card.module.scss'
-import vars from './card.module.scss'
 
-const Card = props => {
+const Card = ({ qty, size, type, id, rarity, name, caption }) => {
 	const useStylesBootstrap = makeStyles(theme => ({
 		arrow: {
 			color: theme.palette.grey[900],
@@ -22,36 +21,30 @@ const Card = props => {
 		},
 	}))
 
-	const classes = useStylesBootstrap()
+	const [, setBgLoaded] = useState(false)
+	const [, setLoaded] = useState(false)
 
-	const TOOLTIP_OPTIONS = {
-		placement: 'bottom',
-		TransitionComponent: Zoom,
-		arrow: true,
-		classes: classes,
-	}
+	const QTY = qty ? null : styles.noQty
+	const cssClass = [styles.card, styles[size], QTY]
 
-	const [BG_LOADED, setBgLoaded] = useState(false)
-	const [LOADED, setLoaded] = useState(false)
-
-	let bgClass = BG_LOADED ? 'show' : 'hide'
-	let imgClass = LOADED ? 'show' : 'hide'
-
-	let qty = props.qty ? null : styles.noQty
-	let cssClass = [styles.card, styles[props.size], qty]
-
-	let width = styles[`${props.size}Px`]
-	let materialSrc =
-		props.type === 'gem' || props.type === 'common'
-			? `/img/${props.type}/${props.id}_${props.rarity}.webp`
-			: `/img/${props.type}/${props.id}.webp`
+	const width = styles[`${size}Px`]
+	const materialSrc =
+		type === 'gem' || type === 'common'
+			? `/img/${type}/${id}_${rarity}.webp`
+			: `/img/${type}/${id}.webp`
 
 	return (
-		<Tooltip title={props.name} {...TOOLTIP_OPTIONS}>
-			<div className={cssClass.join(' ')} data-tip={props.name}>
+		<Tooltip
+			title={name}
+			placement="bottom"
+			TransitionComponent={Zoom}
+			classes={useStylesBootstrap()}
+			arrow
+		>
+			<div className={cssClass.join(' ')} data-tip={name}>
 				<div className={styles.imageHolder}>
 					<Image
-						src={`/img/rarity/rarity_${props.rarity}.webp`}
+						src={`/img/rarity/rarity_${rarity}.webp`}
 						alt="card"
 						width={width}
 						height={width}
@@ -68,10 +61,25 @@ const Card = props => {
 					</div>
 				</div>
 
-				{props.caption && <h2>{props.name}</h2>}
+				{caption && <h2>{name}</h2>}
 			</div>
 		</Tooltip>
 	)
+}
+
+Card.defaultProps = {
+	caption: false,
+	qty: null,
+}
+
+Card.propTypes = {
+	qty: PropTypes.number,
+	size: PropTypes.string.isRequired,
+	type: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
+	name: PropTypes.string.isRequired,
+	caption: PropTypes.bool,
+	rarity: PropTypes.number.isRequired,
 }
 
 export default Card

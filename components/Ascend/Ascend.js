@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Card from '../Card/Card'
 
@@ -7,51 +8,55 @@ import Boss from '../../data/boss'
 import Gems from '../../data/gems'
 import Commons from '../../data/common'
 
-const Ascend = props => {
-	let local = props.ascend.local
-	let boss = props.ascend.boss
-	let gem = props.ascend.gem
-	let common = props.ascend.common
+const Ascend = ({ ascend }) => {
+	const LOCAL = ascend.local
+	const BOSS = ascend.boss
+	const GEM = ascend.gem
+	const COMMON = ascend.common
 
 	return (
 		<div className="ascendCards">
 			<h3>Materials</h3>
 			<Card
 				type="local"
-				id={local}
-				name={Locals[local].name}
+				id={LOCAL}
+				name={Locals[LOCAL].name}
 				rarity={1}
 				size="small"
-				tooltip={true}
+				tooltip
 			/>
-			{boss && (
+			{BOSS && (
 				<Card
 					type="boss"
-					id={boss}
-					name={Boss[boss].name}
+					id={BOSS}
+					name={Boss[BOSS].name}
 					rarity={3}
 					size="small"
-					tooltip={true}
+					tooltip
 				/>
 			)}
 			<Card
 				type="gem"
-				id={gem}
-				name={Gems[gem][3]}
+				id={GEM}
+				name={Gems[GEM][3]}
 				rarity={3}
 				size="small"
-				tooltip={true}
+				tooltip
 			/>
 			<Card
 				type="common"
-				id={common}
-				name={Commons[common][3]}
+				id={COMMON}
+				name={Commons[COMMON][3]}
 				rarity={3}
 				size="small"
-				tooltip={true}
+				tooltip
 			/>
 		</div>
 	)
+}
+
+Ascend.propTypes = {
+	ascend: PropTypes.instanceOf(Object).isRequired,
 }
 
 export default Ascend

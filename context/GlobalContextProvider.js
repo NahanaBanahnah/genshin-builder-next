@@ -5,8 +5,9 @@ export const GlobalStateContext = createContext()
 export const GlobalDispatchContext = createContext()
 
 const initialState = {
-	stat: null,
-	artifact: null,
+	STAT_STATE: null,
+	ARTIFACT_STATE: null,
+	CHARACTER_STATE: null,
 }
 
 const GlobalContextProvider = ({ children }) => {
