@@ -1,35 +1,39 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 import Image from 'next/image'
 import Weapons from '../../data/weapons'
 
-const Weapon = props => {
-	let WEAPON = false
-	WEAPON = Weapons.find(e => e.id === props.id)
-	let name = WEAPON ? WEAPON.name : props.id
-	let rate = {
+const Weapon = ({ id }) => {
+	const { name, rating } = Weapons.find(e => e.id === id)
+
+	const RATE = {
 		3: 'three',
 		4: 'four',
 		5: 'five',
 	}
 	const [LOADED, setLoaded] = useState(false)
-	let imgClass = LOADED ? 'show' : 'hide'
+	const IMG_CLASS = LOADED ? 'show' : 'hide'
 
-	let IMG = `/img/weapons/${props.id}.webp`
+	const IMG = `/img/weapons/${id}.webp`
 	return (
 		<>
 			<Image
-				className={imgClass}
+				className={IMG_CLASS}
 				src={IMG}
-				alt={props.id}
+				alt={id}
 				width={48}
 				height={48}
 				placeholder="blur"
 				blurDataURL={`/_next/image?url=${IMG}&w=32&q=10`}
 				onLoad={() => setLoaded(true)}
 			/>
-			<div className={`${rate[WEAPON.rating]}-star`}>{name}</div>
+			<div className={`${RATE[rating]}-star`}>{name}</div>
 		</>
 	)
+}
+
+Weapon.propTypes = {
+	id: PropTypes.string.isRequired,
 }
 
 export default Weapon

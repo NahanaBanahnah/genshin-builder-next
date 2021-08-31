@@ -3,27 +3,27 @@ const Reducer = (state, action) => {
 		case 'SET_ARTIFACT':
 			return {
 				...state,
-				artifact: action.payload,
+				ARTIFACT_STATE: action.payload,
 			}
 		case 'SET_STAT':
 			return {
 				...state,
-				stat: action.payload,
+				STAT_STATE: action.payload,
 			}
 		case 'SET_CHARACTER':
 			return {
 				...state,
-				character: action.payload,
+				CHARACTER_STATE: action.payload,
 			}
 		case 'SET_FILTER':
 			return {
 				...state,
-				filtered: action.payload,
+				FILTERED: action.payload,
 			}
 		case 'SET_BUILD':
 			return {
 				...state,
-				build: action.payload,
+				BUILD: action.payload,
 			}
 
 		default:

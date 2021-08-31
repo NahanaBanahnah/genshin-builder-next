@@ -1,11 +1,16 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 import Weapon from './Weapon'
 
-const Weapons = props => {
-	let weapons = props.weapons.map(weapon => {
-		return <Weapon key={weapon} id={weapon} />
-	})
-	return <div className="weapons">{weapons}</div>
+const Weapons = ({ weapons }) => (
+	<div className="weapons">
+		{weapons.map(weapon => (
+			<Weapon key={weapon} id={weapon} />
+		))}
+	</div>
+)
+
+Weapons.propTypes = {
+	weapons: PropTypes.instanceOf(Array).isRequired,
 }
 
 export default Weapons

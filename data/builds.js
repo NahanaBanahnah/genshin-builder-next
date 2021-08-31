@@ -237,7 +237,7 @@ module.exports = [
 		name: 'Eula',
 		id: 'eula',
 		element: 'cryo',
-		build: 'Physical Main DPS',
+		build: 'Physical Main DPS ALTERNATIVE',
 		artifact: [
 			{
 				id: 'bloodstained_chivalry',
@@ -871,7 +871,7 @@ module.exports = [
 		name: 'Ningguang',
 		id: 'ningguang',
 		element: 'geo',
-		build: 'Geo Burst DPS',
+		build: 'Geo Burst DPS ALTERNATIVE',
 		artifact: [
 			{
 				id: 'archaic_petra',

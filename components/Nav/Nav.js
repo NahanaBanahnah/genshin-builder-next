@@ -1,11 +1,7 @@
 import { useContext } from 'react'
-
 import Select from '../Select/Select'
 
-import {
-	GlobalDispatchContext,
-	GlobalStateContext,
-} from '../../context/GlobalContextProvider'
+import { GlobalDispatchContext } from '../../context/GlobalContextProvider'
 
 import Artifacts from '../../data/artifacts'
 import Characters from '../../data/characters'
@@ -14,14 +10,12 @@ import Stats from '../../data/stats'
 const Nav = () => {
 	const dispatch = useContext(GlobalDispatchContext)
 
-	const CHARACTER_OPTIONS = Object.values(Characters).map(ele => {
-		return {
-			id: ele.id,
-			name: ele.name,
-		}
-	})
+	const CHARACTER_OPTIONS = Object.values(Characters).map(ele => ({
+		id: ele.id,
+		name: ele.name,
+	}))
 
-	let stats = [...Stats]
+	const stats = [...Stats]
 	stats.sort((a, b) => a.name.localeCompare(b.name))
 
 	let sandOptions = stats.filter(ele => ele.set.some(g => g === 'sand'))
@@ -33,18 +27,18 @@ const Nav = () => {
 	crownOptions = crownOptions.map(v => ({ ...v, type: 'crown' }))
 
 	const setArtifact = obj => {
-		let value = obj ? obj.id : null
+		const value = obj ? obj.id : null
+
 		dispatch({ type: 'SET_ARTIFACT', payload: value })
 	}
 
 	const setCharacter = obj => {
-		let value = obj ? obj.id : null
+		const value = obj ? obj.id : null
 		dispatch({ type: 'SET_CHARACTER', payload: value })
 	}
 
 	const setStat = obj => {
-		console.log(obj)
-		let value = obj ? {} : null
+		const value = obj ? {} : null
 		if (value) {
 			value.type = obj.type
 			value.stat = obj.id
@@ -62,7 +56,7 @@ const Nav = () => {
 					id="id"
 					title="name"
 					size={250}
-					function={e => setCharacter(e)}
+					onChangeFunction={e => setCharacter(e)}
 					label="Character"
 				/>
 				<Select
@@ -70,7 +64,7 @@ const Nav = () => {
 					id="id"
 					title="name"
 					size={250}
-					function={e => setArtifact(e)}
+					onChangeFunction={e => setArtifact(e)}
 					label="Artifact"
 				/>
 				<Select
@@ -79,7 +73,7 @@ const Nav = () => {
 					id="id"
 					title="name"
 					size={150}
-					function={e => setStat(e)}
+					onChangeFunction={e => setStat(e)}
 					label="Sand"
 				/>
 				<Select
@@ -88,7 +82,7 @@ const Nav = () => {
 					id="id"
 					size={150}
 					title="name"
-					function={e => setStat(e)}
+					onChangeFunction={e => setStat(e)}
 					label="Glass"
 				/>
 				<Select
@@ -97,7 +91,7 @@ const Nav = () => {
 					id="id"
 					size={150}
 					title="name"
-					function={e => setStat(e)}
+					onChangeFunction={e => setStat(e)}
 					label="Crown"
 				/>
 			</div>
