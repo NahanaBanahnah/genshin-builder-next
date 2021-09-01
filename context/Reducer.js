@@ -15,6 +15,11 @@ const Reducer = (state, action) => {
 				...state,
 				CHARACTER_STATE: action.payload,
 			}
+		case 'SET_WEAPON':
+			return {
+				...state,
+				WEAPON_STATE: action.payload,
+			}
 		case 'SET_FILTER':
 			return {
 				...state,

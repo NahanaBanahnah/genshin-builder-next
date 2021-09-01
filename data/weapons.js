@@ -1,259 +1,1187 @@
-module.exports = [
-	{
-		id: 'snow-tombed_starsilver',
-		name: 'Snow-Tombed Starsilver',
-        rating: 4,
+module.exports = {
+	alley_hunter: {
+		name: 'Alley Hunter',
+		type: 'bow',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'CRIT Rate',
+		passiveName: 'Urban Guerrilla',
+		passiveDesc:
+			'Every 4s a character is on the field, their ATK increases by 4/5/6/7/8% and their CRIT DMG increases by 4/5/6/7/8%. This effect has a maximum of 5 stacks and will not be reset if the character leaves the field, but will be cleared when the character takes DMG.',
 	},
-    {
-        id: 'iron_sting',
-        name: 'Iron Sting',
-        rating: 4,
-    }, 
-    {
-        id: 'festering_desire',
-        name: 'Festering Desire',
-        rating: 4,
-    }, 
-    {
-        id: 'sacrificial_sword',
-        name: 'Sacrificial Sword',
-        rating: 4,
-    }, 
-    {
-        id: 'aquila_favonia',
-        name: 'Aquila Favonia',
-        rating: 5,
-    },
-    {
-        id: 'the_black_sword',
-        name: 'The Black Sword',
-        rating: 4
-    },
-    {
-        id: 'skyward_blade',
-        name: 'Skyward Blade',
-        rating: 5,
-    },
-    {
-        id: 'favonius_sword',
-        name: 'Favonius Sword',
-        rating: 4,
-    }, 
-    {
-        id: 'elegy_for_the_end',
-        name: 'Elegy For The End',
-        rating: 5,
-    }, {
-        id: 'skyward_harp',
-        name: 'Skyward Harp',
-        rating: 5,
-    }, {
-        id: 'the_stringless',
-        name: 'The Stringless',
-        rating: 4, 
-    }, {
-        id: 'the_widsith',
-        name: 'The Widsith',
-        rating: 4
-    }, {
-        id: 'thrilling_tales_of_dragon_slayers',
-        name: 'Thrilling Tales of Dragon Slayers',
-        rating: 3,
-    }, {
-        id: 'prototype_amber',
-        name: 'Prototype Amber',
-        rating: 4,
-    }, {
-        id: 'primordial_jade_winged-spear',
-        name: 'Primordial Jade Winged-Spear',
-        rating: 5,
-    }, {
-        id: 'staff_of_homa',
-        name: 'Staff of Homa',
-        rating: 5,
-    }, {
-        id: 'blackcliff_pole',
-        name: 'Blackcliff Pole',
-        rating: 4,
-    }, {
-        id: 'freedom-sworn',
-        name: 'Freedom-Sworn',
-        rating: 5,
-    }, {
-        id: 'primordial_jade_cutter',
-        name: 'Primordial Jade Cutter',
-        rating: 5
-    }, {
-        id: 'song_of_broken_pines',
-        name: 'Song of Broken Pines',
-        rating: 5,
-    }, {
-        id: 'sacrificial_greatsword',
-        name: 'Sacrificial Greatsword',
-        rating: 4,
-    }, {
-        id: 'skyward_pride',
-        name: 'Skyward Pride',
-        rating: 5,
-    }, {
-        id: 'blackcliff_slasher',
-        name: 'Blackcliff Slasher',
-        rating: 4,
-    }, {
-        id: 'dragonspine_spear',
-        name: 'Dragonspine Spear',
-        rating: 4,
-    }, {
-        id: 'dathmatch',
-        name: 'Dathmatch',
-        rating: 4,
-    }, {
-        id: 'mistsplitter_reforged',
-        name: 'Mistsplitter Reforged',
-        rating: 5,
-    }, {
-        id: 'wolfs_gravestone',
-        name: 'Wolf\'s Gravestone',
-        rating: 5,
-    }, {
-        id: 'prototype_archaic',
-        name: 'Prototype Archaic',
-        rating: 4,
-    }, {
-        id: 'summit_shaper',
-        name: 'Summit Shaper',
-        rating: 5,
-    }, {
-        id: 'sacrificial_bow', 
-        name: 'Sacrificial Bow',
-        rating: 4,
-    }, {
-        id: 'favonius_warbow',
-        name: 'Favonius Warbow',
-        rating: 4,
-    }, {
-        id: 'recurve_bow',
-        name: 'Recurve Bow',
-        rating: 3
-    }, {
-        id: 'amos_bow',
-        name: 'Amos\' Bow',
-        rating: 5,
-    }, {
-        id: 'blackcliff_warbow',
-        name: 'Blackcliff Warbow',
-        rating: 4
-    }, {
-        id: 'skyward_atlas',
-        name: 'Skyward Atlas',
-        rating: 5,
-    }, {
-        id: 'magic_guide',
-        name: 'Magic Guide',
-        rating: 3
-    }, {
-        id: 'serpent_spine',
-        name: 'Serpent Spine',
-        rating: 4,
-    }, { 
-        id: 'skyrider_greatsword',
-        name: 'Skyrider Greatsword',
-        rating: 3,
-    }, {
-        id: 'rust',
-        name: 'Rust',
-    }, {
-        id: 'the_unforged',
-        name: 'The Unforged',
-        rating: 5,
-    }, {
-        id: 'rainslasher',
-        name: 'Rainslasher',
-        rating: 4,
-    }, {
-        id: 'prototype_rancour',
-        name: 'Prototype Rancour',
-        rating: 4, 
-    }, {
-        id: 'harbinger_of_dawn',
-        name: 'Harbinger of Dawn',
-        rating: 3, 
-    }, {
-        id: 'travelers_handy_sword',
-        name: 'Traveler\'s Handy Sword',
-        rating: 3,
-    }, {
-        id: 'the_bell',
-        name: 'The Bell',
-        rating: 4,
-    }, {
-        id: 'whiteblind',
-        name: 'Whiteblind',
-        rating: 4, 
-    }, {
-        id: 'memory_of_dust',
-        name: 'Memory of Dust',
-        rating: 5,
-    }, {
-        id: 'solar_pearl',
-        name: 'Solar Pearl',
-        rating: 4, 
-    }, {
-        id: 'eye_of_perception',
-        name: 'Eye of Perception',
-        rating: 4, 
-    }, {
-        id: 'prototype_starglitter',
-        name: 'Prototype Starglitter',
-        rating: 4,
-    }, {
-        id: 'skyward_spine',
-        name: 'Skyward Spine',
-        rating: 5,
-    }, {
-        id: 'favonius_lance',
-        name: 'Favonius Lance',
-        rating: 4,
-    }, {
-        id: 'favonius_codex',
-        name: 'Favonius Codex',
-        rating: 4
-    }, {
-        id: 'the_viridescent_hunt',
-        name: 'The Viridescent Hunt',
-        rating: 4,
-    }, {
-        id: 'raven_bow',
-        name: 'Raven Bow',
-        rating: 3
-    }, {
-        id: 'lost_prayer_to_the_sacred_winds',
-        name: 'Lost Prayer To The Sacred Winds',
-        rating: 5
-    }, {
-        id: 'deathmatch',
-        name: 'Deathmatch',
-        rating: 4,
-    }, {
-        id: 'dragons_bane',
-        name: 'Dragon\'s Bane',
-        rating: 4
-    }, {
-        id: 'sacrificial_fragments',
-        name: 'Sacrificial Fragments',
-        rating: 4,
-    }, {
-        id: 'favonius_greatsword',
-        name: 'Favonius Greatsword',
-        rating: 4,
-    }, {
-        id: 'thundering_pulse',
-        name: 'Thundering Pulse',
-        rating: 5,
-    }, {
-        id: 'katsuragikiri_nagamasa',
-        name: 'Katsuragikiri Nagamasa',
-        rating: 4,
-    }
-
-]
+	amber_catalyst: {
+		name: 'Amber Catalyst',
+		type: 'catalyst',
+		rarity: 3,
+		baseAttack: 40,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Elemental Mastery',
+		passiveDesc:
+			'Normal Attack hits increase all Elemental DMG by 6/7.5/9/10.5/12% for 6s. Max 2 stacks.',
+	},
+	amenoma_kageuchi: {
+		name: 'Amenoma Kageuchi',
+		type: 'sword',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'ATK',
+		passiveName: 'Iwakura Succession',
+		passiveDesc:
+			'After casting an Elemental Skill, gain 1 Succession Seed. This effect can be triggered once every 5s. The Succession Seed lasts for 30s. Up to 3 Succession Seeds may exist simultaneously. After using an Elemental Burst, all Succession Seeds are consumed and after 2s, the character regenerates 6 Energy for each seed consumed.',
+	},
+	amos_bow: {
+		name: "Amos' Bow",
+		type: 'bow',
+		rarity: 5,
+		baseAttack: 46,
+		subStat: 'ATK',
+		passiveName: 'Strong_Willed',
+		passiveDesc:
+			'Increases Normal Attack and Aimed Shot DMG by 12/15/18/21/24%. Increases DMG from arrows shot by a further 8/10/12/14/16% for every 0.1s that the arrow is in flight, up to 0.5s. Stacks up to 5 times on each arrow.',
+	},
+	apprentices_notes: {
+		name: "Apprentice's Notes",
+		type: 'catalyst',
+		rarity: 1,
+		baseAttack: 23,
+		subStat: '_',
+		passiveName: '_',
+		passiveDesc: '_',
+	},
+	aquila_favonia: {
+		name: 'Aquila Favonia',
+		type: 'sword',
+		rarity: 5,
+		baseAttack: 48,
+		subStat: 'Physical DMG Bonus',
+		passiveName: "Falcon's Defiance",
+		passiveDesc:
+			'ATK is increased by 20/25/30/35/40%. Triggers on taking DMG: the soul of the Falcon of the West awakens, holding the banner of the resistance aloft, regenerating HP equal to 100/115/130/145/160% of ATK and dealing 200/230/260/290/320% of ATK as DMG to surrounding enemies. This effect can only occur once every 15s.',
+	},
+	beginners_protector: {
+		name: "Beginner's Protector",
+		type: 'polearm',
+		rarity: 1,
+		baseAttack: 23,
+		subStat: '_',
+		passiveName: '_',
+		passiveDesc: '_',
+	},
+	black_tassel: {
+		name: 'Black Tassel',
+		type: 'polearm',
+		rarity: 3,
+		baseAttack: 38,
+		subStat: 'HP',
+		passiveName: 'Bane of the Soft',
+		passiveDesc: 'Increases DMG against slimes by 40/50/60/70/80%.',
+	},
+	blackcliff_amulet: {
+		name: 'Blackcliff Amulet',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'CRIT DMG',
+		passiveName: 'Press the Advantage',
+		passiveDesc:
+			'After defeating an enemy, ATK is increased by 12/15/18/21/24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+	},
+	blackcliff_longsword: {
+		name: 'Blackcliff Longsword',
+		type: 'sword',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'CRIT DMG',
+		passiveName: 'Press the Advantage',
+		passiveDesc:
+			'After defeating an enemy, ATK is increased by 12/15/18/21/24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+	},
+	blackcliff_pole: {
+		name: 'Blackcliff Pole',
+		type: 'polearm',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'CRIT DMG',
+		passiveName: 'Press the Advantage',
+		passiveDesc:
+			'After defeating an enemy, ATK is increased by 12/15/18/21/24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+	},
+	blackcliff_slasher: {
+		name: 'Blackcliff Slasher',
+		type: 'claymore',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'CRIT DMG',
+		passiveName: 'Press the Advantage',
+		passiveDesc:
+			'After defeating an enemy, ATK is increased by 12/15/18/21/24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+	},
+	blackcliff_warbow: {
+		name: 'Blackcliff Warbow',
+		type: 'bow',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'CRIT DMG',
+		passiveName: 'Press the Advantage',
+		passiveDesc:
+			'After defeating an enemy, ATK is increased by 12/15/18/21/24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.',
+	},
+	bloodtainted_greatsword: {
+		name: 'Bloodtainted Greatsword',
+		type: 'claymore',
+		rarity: 3,
+		baseAttack: 38,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Bane of Fire and Thunder',
+		passiveDesc:
+			'Increases DMG against enemies affected by Pyro or Electro by 12/15/18/21/24%.',
+	},
+	compound_bow: {
+		name: 'Compound Bow',
+		type: 'bow',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'Physical DMG Bonus',
+		passiveName: 'Infusion Arrow',
+		passiveDesc:
+			'Normal Attack and Aimed Shot hits increase ATK by 4/5/6/7/8% and Normal Attack SPD by 1.2/1.5/1.8/2.1/2.4% for 6s. Max 4 stacks. Can only occur once every 0.3s.',
+	},
+	cool_steel: {
+		name: 'Cool Steel',
+		type: 'sword',
+		rarity: 3,
+		baseAttack: 39,
+		subStat: 'ATK',
+		passiveName: 'Bane of Water and Ice',
+		passiveDesc:
+			'Increases DMG against enemies affected by Hydro or Cryo by 12/15/18/21/24%.',
+	},
+	crescent_pike: {
+		name: 'Crescent Pike',
+		type: 'polearm',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'Physical DMG Bonus',
+		passiveName: 'Infusion Needle',
+		passiveDesc:
+			'After picking up an Elemental Orb/Particle, Normal and Charged Attacks deal an additional 20% ATK as DMG for 5s.',
+	},
+	dark_iron_sword: {
+		name: 'Dark Iron Sword',
+		type: 'sword',
+		rarity: 3,
+		baseAttack: 40,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Overloaded',
+		passiveDesc:
+			'Upon causing an Overloaded, Superconduct, Electro_Charged, or an Electro_infused Swirl reaction, increases Base ATK by 20/25/30/35/40% for 12s.',
+	},
+	deathmatch: {
+		name: 'Deathmatch',
+		type: 'polearm',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'CRIT Rate',
+		passiveName: 'Gladiator',
+		passiveDesc:
+			'If there are at least 2 opponents nearby, ATK is increased by 16% and DEF is increased by 16%. If there are less than 2 enemies nearby, ATK is increased by 24%.',
+	},
+	debate_club: {
+		name: 'Debate Club',
+		type: 'claymore',
+		rarity: 3,
+		baseAttack: 39,
+		subStat: 'ATK',
+		passiveName: 'Blunt Conclusion',
+		passiveDesc:
+			'After using an Elemental Skill, Normal or Charged Attacks, on hit, deal an additional 60/75/90/105/120% ATK DMG in a small area. Effect lasts 15s. DMG can only occur once every 3s.',
+	},
+	dodoco_tales: {
+		name: 'Dodoco Tales',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'ATK',
+		passiveName: 'Dodoventure!',
+		passiveDesc:
+			'Normal Attack hits on opponents increase Charged Attack DMG by 16% for 6s. Charged Attack hits on opponents increase ATK by 8% for 6s.',
+	},
+	dragons_bane: {
+		name: "Dragon's Bane",
+		type: 'polearm',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Bane of Flame and Water',
+		passiveDesc:
+			'Increases DMG against enemies affected by Hydro or Pyro by 20/24/28/32/36%.',
+	},
+	dragonspine_spear: {
+		name: 'Dragonspine Spear',
+		type: 'polearm',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'Physical DMG Bonus',
+		passiveName: '',
+		passiveDesc:
+			'Hitting an opponent with Normal and Charged Attacks has a 60% chance of forming and dropping an Everfrost Icicle above them, dealing 80% AoE ATK DMG. Opponents affected by Cryo are dealt 200% ATK DMG. Can only occur once every 10s.',
+	},
+	dull_blade: {
+		name: 'Dull Blade',
+		type: 'sword',
+		rarity: 1,
+		baseAttack: 23,
+		subStat: '_',
+		passiveName: '_',
+		passiveDesc: '_',
+	},
+	ebony_bow: {
+		name: 'Ebony Bow',
+		type: 'bow',
+		rarity: 3,
+		baseAttack: 40,
+		subStat: 'ATK',
+		passiveName: 'Decimate',
+		passiveDesc:
+			'Increases DMG against mechanoid Ruin enemies by 40/50/60/70/80%.',
+	},
+	elegy_for_the_end: {
+		name: 'Elegy for the End',
+		type: 'bow',
+		rarity: 5,
+		baseAttack: 46,
+		subStat: 'Energy Recharge',
+		passiveName: 'The Parting Refrain',
+		passiveDesc:
+			"A part of the 'Millennial Movement' that wanders amidst the winds. Increases Elemental Mastery by 60. When the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field. When you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the 'Millennial Movement: Farewell Song' effect for 12s. 'Millennial Movement: Farewell Song' increases Elemental Mastery by 100 and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s. Of the many effects of the 'Millennial Movement,' buffs of the same type will not stack.",
+	},
+	emerald_orb: {
+		name: 'Emerald Orb',
+		type: 'catalyst',
+		rarity: 3,
+		baseAttack: 40,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Rapids',
+		passiveDesc:
+			'Upon causing a Vaporize, Electro_Charged, Frozen, or a Hydro_infused Swirl reaction, increases Base ATK by 20/25/30/35/40% for 12s.',
+	},
+	eye_of_perception: {
+		name: 'Eye of Perception',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'ATK',
+		passiveName: 'Echo',
+		passiveDesc:
+			'Normal and Charged Attacks have a 50% chance to fire a Bolt of Perception, dealing 240/270/300/330/360% ATK as DMG. This bolt can bounce between enemies a maximum of 4 times. This effect can occur once every 12/11/10/9/8s.',
+	},
+	favonius_codex: {
+		name: 'Favonius Codex',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'Energy Recharge',
+		passiveName: 'Windfall',
+		passiveDesc:
+			'CRIT hits have a 60/70/80/90/100% chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every 12/10.5/9/7.5/6s.',
+	},
+	favonius_greatsword: {
+		name: 'Favonius Greatsword',
+		type: 'claymore',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'Energy Recharge',
+		passiveName: 'Windfall',
+		passiveDesc:
+			'CRIT hits have a 60/70/80/90/100% chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every 12/10.5/9/7.5/6s.',
+	},
+	favonius_lance: {
+		name: 'Favonius Lance',
+		type: 'polearm',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'Energy Recharge',
+		passiveName: 'Windfall',
+		passiveDesc:
+			'CRIT hits have a 60/70/80/90/100% chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every 12/10.5/9/7.5/6s.',
+	},
+	favonius_sword: {
+		name: 'Favonius Sword',
+		type: 'sword',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'Energy Recharge',
+		passiveName: 'Windfall',
+		passiveDesc:
+			'CRIT hits have a 60/70/80/90/100% chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every 12/10.5/9/7.5/6s.',
+	},
+	favonius_warbow: {
+		name: 'Favonius Warbow',
+		type: 'bow',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'Energy Recharge',
+		passiveName: 'Windfall',
+		passiveDesc:
+			'CRIT hits have a 60/70/80/90/100% chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every 12/10.5/9/7.5/6s.',
+	},
+	ferrous_shadow: {
+		name: 'Ferrous Shadow',
+		type: 'claymore',
+		rarity: 3,
+		baseAttack: 39,
+		subStat: 'HP',
+		passiveName: 'Unbending',
+		passiveDesc:
+			'When HP falls below 70/75/80/85/90%, increases Charged Attack DMG by 30/35/40/45/50%, and Charged Attacks become much harder to interrupt.',
+	},
+	festering_desire: {
+		name: 'Festering Desire',
+		type: 'sword',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'Energy Recharge',
+		passiveName: '',
+		passiveDesc:
+			'Increases Elemental Skill DMG by 16/20/24/28/32% and Elemental Skill CRIT Rate by 6/7.5/9/10.5/12%.',
+	},
+	fillet_blade: {
+		name: 'Fillet Blade',
+		type: 'sword',
+		rarity: 3,
+		baseAttack: 39,
+		subStat: 'ATK',
+		passiveName: 'Gash',
+		passiveDesc:
+			'On hit, has 50% chance to deal 240/280/320/360/400% ATK DMG to a single enemy. Can only occur once every 15/14/13/12/11s.',
+	},
+	freedom_sworn: {
+		name: 'Freedom_Sworn',
+		type: 'sword',
+		rarity: '5',
+		subStat: 'Elemental Mastery',
+		passiveName: 'Revolutionary Chorale',
+		passiveDesc:
+			"A part of the 'Millennial Movement' that wanders amidst the winds. Increases DMG by 10%/12.5%/15%/17.5%/20%. When the character wielding this weapon triggers Elemental Reactions, they gain a Sigil of Rebellion. This effect can be triggered once every 0.5s and can be triggered even if said character is not on the field.When you possess 2 Sigils of Rebellion, all of them will be consumed and all nearby party members will obtain 'Millennial Movement: Song of Resistance' for 12s. 'Millennial Movement: Song of Resistance' increases Normal, Charged, and Plunging Attack DMG by 16%/20%/24%/28%/32% and increases ATK by 20%/25%/30%/35%/40%. Once this effect is triggered, you will not gain Sigils of Rebellion for 20s.Of the many effects of the 'Millennial Movement,' buffs of the same type will not stack.",
+	},
+	frostbearer: {
+		name: 'Frostbearer',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'ATK',
+		passiveName: '',
+		passiveDesc:
+			'Hitting an opponent with Normal and Charged Attacks has a 60% chance of forming and dropping an Everfrost Icicle above them, dealing 80% AoE ATK DMG. Opponents affected by Cryo are dealt 200% ATK DMG. Can only occur once every 10s.',
+	},
+	hakushin_ring: {
+		name: 'Hakushin Ring',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'Energy Recharge',
+		passiveName: 'Sakura Saiguu',
+		passiveDesc:
+			'After the character equipped with this weapon triggers an Electro elemental reaction, nearby party members of an Elemental Type involved in the elemental reaction receive a 10% Elemental DMG Bonus for their element, lasting 6s. Elemental Bonuses gained in this way cannot be stacked.',
+	},
+	halberd: {
+		name: 'Halberd',
+		type: 'polearm',
+		rarity: 3,
+		baseAttack: 40,
+		subStat: 'ATK',
+		passiveName: 'Heavy',
+		passiveDesc:
+			'Normal Attacks deal an additional 160/200/240/280/320% DMG. Can only occur once every 10s.',
+	},
+	hamayumi: {
+		name: 'Hamayumi',
+		type: 'bow',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'ATK',
+		passiveName: 'Full Draw',
+		passiveDesc:
+			"Increases Normal Attack DMG by 16% and Charged Attack DMG by 12%. When the equipping character's Energy reaches 100%, this effect is increased by 100%.",
+	},
+	harbinger_of_dawn: {
+		name: 'Harbinger of Dawn',
+		type: 'sword',
+		rarity: 3,
+		baseAttack: 39,
+		subStat: 'CRIT DMG',
+		passiveName: 'Vigorous',
+		passiveDesc:
+			'When HP is above 90%, increases CRIT Rate by 14/18/22/24/28%.',
+	},
+	hunters_bow: {
+		name: "Hunter's Bow",
+		type: 'bow',
+		rarity: 1,
+		baseAttack: 23,
+		subStat: '_',
+		passiveName: '_',
+		passiveDesc: '_',
+	},
+	iron_point: {
+		name: 'Iron Point',
+		type: 'polearm',
+		rarity: 2,
+		baseAttack: 33,
+		subStat: '_',
+		passiveName: '_',
+		passiveDesc: '_',
+	},
+	iron_sting: {
+		name: 'Iron Sting',
+		type: 'sword',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Infusion Stinger',
+		passiveDesc:
+			'Dealing Elemental DMG increases all DMG by 6% for 6s. Max 2 stacks. Can only occur once every 1s.',
+	},
+	katsuragikiri_nagamasa: {
+		name: 'Katsuragikiri Nagamasa',
+		type: 'claymore',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'Energy Recharge',
+		passiveName: 'Samurai Conduct',
+		passiveDesc:
+			'Increases Elemental Skill DMG by 6%. After Elemental Skill hits an opponent, the character loses 3 Energy but regenerates 3 Energy every 2s for the next 6s. This effect can occur once every 10s. Can be triggered even when the character is not on the field.',
+	},
+	kitain_cross_spear: {
+		name: 'Kitain Cross Spear',
+		type: 'polearm',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Samurai Conduct',
+		passiveDesc:
+			'Increases Elemental Skill DMG by 6%. After Elemental Skill hits an opponent, the character loses 3 Energy but regenerates 3 Energy every 2s for the next 6s. This effect can occur once every 10s. Can be triggered even when the character is not on the field.',
+	},
+	lions_roar: {
+		name: "Lion's Roar",
+		type: 'sword',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'ATK',
+		passiveName: 'Bane of Fire and Thunder',
+		passiveDesc:
+			'Increases DMG against enemies affected by Pyro or Electro by 20/24/28/32/36%.',
+	},
+	lithic_blade: {
+		name: 'Lithic Blade',
+		type: 'claymore',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'CRIT DMG',
+		passiveName: 'Lithic Axiom _ Unity',
+		passiveDesc:
+			'For every character in the party who hails from Liyue, the character who equips this weapon gains 6/7/8/9/10% ATK increase and 2/3/4/5/6% CRIT Rate increase.',
+	},
+	lithic_spear: {
+		name: 'Lithic Spear',
+		type: 'polearm',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'Physical DMG Bonus',
+		passiveName: 'Lithic Axiom _ Subjugating Evil',
+		passiveDesc: '_',
+	},
+	lost_prayer_to_the_sacred_winds: {
+		name: 'Lost Prayer to the Sacred Winds',
+		type: 'catalyst',
+		rarity: 5,
+		baseAttack: 44,
+		subStat: 'CRIT Rate',
+		passiveName: 'Boundless Blessing',
+		passiveDesc:
+			'Increases Movement SPD by 10%. When in battle, earn a 6/8/10/12/14% Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.',
+	},
+	magic_guide: {
+		name: 'Magic Guide',
+		type: 'catalyst',
+		rarity: 3,
+		baseAttack: 38,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Bane of Storm and Tide',
+		passiveDesc:
+			'Increases DMG against enemies affected by Hydro or Electro by 12/15/18/21/24%.',
+	},
+	mappa_mare: {
+		name: 'Mappa Mare',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Infusion Scroll',
+		passiveDesc:
+			'Triggering an Elemental reaction grants a 8/10/12/14/16% Elemental DMG Bonus for 10s. Max 2 stacks.',
+	},
+	memory_of_dust: {
+		name: 'Memory of Dust',
+		type: 'catalyst',
+		rarity: 5,
+		baseAttack: 46,
+		subStat: 'ATK',
+		passiveName: 'Golden Majesty',
+		passiveDesc:
+			'Increase Shield Strength by 20/25/30/35/40%. Scoring hits on opponents increases ATK by 4/5/6/7/8% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.',
+	},
+	messenger: {
+		name: 'Messenger',
+		type: 'bow',
+		rarity: 3,
+		baseAttack: 40,
+		subStat: 'CRIT DMG',
+		passiveName: "Archer's Message",
+		passiveDesc:
+			'Aimed Shot hits on weak spots deal an additional 100/125/150/175/200% ATK DMG as CRIT DMG. Can only occur once every 10s.',
+	},
+	mistsplitter_reforged: {
+		name: 'Mistsplitter Reforged',
+		type: 'sword',
+		rarity: 5,
+		baseAttack: 48,
+		subStat: 'CRIT DMG',
+		passiveName: "Mistsplitter's Edge",
+		passiveDesc:
+			"Gain a 12% Elemental DMG Bonus for every element and receive the might of Mistsplitter's Emblem. At stack levels 1/2/3, Mistsplitter's Emblem provides a 8/16/28% Elemental DMG Bonus for the character's Elemental Type. The character will obtain 1 stack of Mistsplitter's Emblem in each of the following scenarios: Normal Attack deals Elemental DMG (stack lasts 5s), casting Elemental Burst (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.",
+	},
+	mitternachts_waltz: {
+		name: 'Mitternachts Waltz',
+		type: 'bow',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'Physical DMG Bonus',
+		passiveName: 'Evernight Duet',
+		passiveDesc:
+			'Normal Attack hits on opponents increase Elemental Skill DMG by 20% for 5s. Elemental Skill hits on opponents increase Normal Attack DMG by 20% for 5s.',
+	},
+	old_mercs_pal: {
+		name: "Old Merc's Pal",
+		type: 'claymore',
+		rarity: 2,
+		baseAttack: 33,
+		subStat: '_',
+		passiveName: '_',
+		passiveDesc: '_',
+	},
+	otherworldly_story: {
+		name: 'Otherworldly Story',
+		type: 'catalyst',
+		rarity: 3,
+		baseAttack: 39,
+		subStat: 'Energy Recharge',
+		passiveName: 'Energy Shower',
+		passiveDesc:
+			'Each Elemental Orb or Particle collected restores 1/1.25/1.5/1.75/2% HP.',
+	},
+	pocket_grimoire: {
+		name: 'Pocket Grimoire',
+		type: 'catalyst',
+		rarity: 2,
+		baseAttack: 33,
+		subStat: '_',
+		passiveName: '_',
+		passiveDesc: '_',
+	},
+	primordial_jade_cutter: {
+		name: 'Primordial Jade Cutter',
+		type: 'sword',
+		rarity: '5',
+		subStat: 'CRIT Rate',
+		passiveName: "Protector's Virtue",
+		passiveDesc:
+			"HP increased by 20%/25%/30%/35%/40%. Additionally, provides an ATK Bonus based on 1.2%/1.5%/1.8%/2.1%/2.4% of the wielder's Max HP.",
+	},
+	primordial_jade_winged_spear: {
+		name: 'Primordial Jade Winged_Spear',
+		type: 'polearm',
+		rarity: 5,
+		baseAttack: 48,
+		subStat: 'CRIT Rate',
+		passiveName: 'Eagle Spear of Justice',
+		passiveDesc:
+			'On hit, increases ATK by 3.2/3.9/4.6/5.3/6% for 6s. Max 7 stacks. Can only occur once every 0.3s. Full stacks increase Skill DMG by 12/16/20/24/28%.',
+	},
+	prototype_archaic: {
+		name: 'Prototype Archaic',
+		type: 'claymore',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'ATK',
+		passiveName: 'Crush',
+		passiveDesc:
+			'On hit, Normal or Charged Attacks have a 50% chance to deal an additional 240/300/360/420/480% ATK DMG to enemies within a small radius. Can only occur once every 15s.',
+	},
+	prototype_crescent: {
+		name: 'Prototype Crescent',
+		type: 'bow',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'ATK',
+		passiveName: 'Unreturning',
+		passiveDesc:
+			'Aimed Shot hits on weak points increase Movement SPD by 10% and ATK by 6% for 10s.',
+	},
+	prototype_grudge: {
+		name: 'Prototype Grudge',
+		type: 'polearm',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'Energy Recharge',
+		passiveName: 'Magic Affinity',
+		passiveDesc:
+			'After using an Elemental Skill, increases Normal and Charged Attack DMG by 8% for 12s. Max 2 stacks.',
+	},
+	prototype_malice: {
+		name: 'Prototype Malice',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'HP',
+		passiveName: 'Gilding',
+		passiveDesc:
+			'Using an Elemental Burst regenerates 4/4.5/5/5.5/6 Energy every 2s for 6s. Additionally, all party members will regenerate 4/4.5/5/5.5/6% HP every 2s for this duration.',
+	},
+	prototype_rancour: {
+		name: 'Prototype Rancour',
+		type: 'sword',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'Physical DMG Bonus',
+		passiveName: 'Smashed Stone',
+		passiveDesc:
+			'On hit, Normal or Charged Attacks increase Base ATK and DEF by 4/4.5/5/5.5/6% for 6s. Max 4 stacks. Can only occur once every 0.3s.',
+	},
+	quartz: {
+		name: 'Quartz',
+		type: 'claymore',
+		rarity: 3,
+		baseAttack: 40,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Residual Heat',
+		passiveDesc:
+			'Upon causing an Overloaded, Melt, Burning, Vaporize, or a Pyro_infused Swirl reaction, increases Base ATK by 20/25/30/35/40% for 12s.',
+	},
+	rainslasher: {
+		name: 'Rainslasher',
+		type: 'claymore',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Bane of Storm and Tide',
+		passiveDesc:
+			'Increases DMG against enemies affected by Hydro or Electro by 20/25/30/35/40%.',
+	},
+	raven_bow: {
+		name: 'Raven Bow',
+		type: 'bow',
+		rarity: 3,
+		baseAttack: 40,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Bane of Flame and Water',
+		passiveDesc:
+			'Increases DMG against enemies affected by Hydro or Pyro by 12/15/18/21/24%.',
+	},
+	recurve_bow: {
+		name: 'Recurve Bow',
+		type: 'bow',
+		rarity: 3,
+		baseAttack: 38,
+		subStat: 'HP',
+		passiveName: 'Cull the Weak',
+		passiveDesc: 'Defeating an opponent restores 8/10/12/14/16% HP.',
+	},
+	royal_bow: {
+		name: 'Royal Bow',
+		type: 'bow',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'ATK',
+		passiveName: 'Focus',
+		passiveDesc:
+			'Upon damaging an enemy, increases CRIT Rate by 8%. Max 5 stacks. A CRIT hit removes all stacks.',
+	},
+	royal_greatsword: {
+		name: 'Royal Greatsword',
+		type: 'claymore',
+		rarity: 4,
+		baseAttack: 43,
+		subStat: 'ATK',
+		passiveName: 'Focus',
+		passiveDesc:
+			'Upon damaging an enemy, increases CRIT Rate by 8%. Max 5 stacks. A CRIT hit removes all stacks.',
+	},
+	royal_grimoire: {
+		name: 'Royal Grimoire',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'ATK',
+		passiveName: 'Focus',
+		passiveDesc:
+			'Upon damaging an enemy, increases CRIT Rate by 8%. Max 5 stacks. A CRIT hit removes all stacks.',
+	},
+	royal_longsword: {
+		name: 'Royal Longsword',
+		type: 'sword',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'ATK',
+		passiveName: 'Focus',
+		passiveDesc:
+			'Upon damaging an enemy, increases CRIT Rate by 8%. Max 5 stacks. A CRIT hit removes all stacks.',
+	},
+	royal_spear: {
+		name: 'Royal Spear',
+		type: 'polearm',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'ATK',
+		passiveName: 'Focus',
+		passiveDesc:
+			'Upon damaging an opponent, increases CRIT Rate by 8%. Max 5 stacks. A CRIT Hit removes all stacks.',
+	},
+	rust: {
+		name: 'Rust',
+		type: 'bow',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'ATK',
+		passiveName: 'Rapid Firing',
+		passiveDesc:
+			'Increases Normal Attack DMG by 40/50/60/70/80% but decreases Aimed Shot DMG by 8/9/10/11/12%',
+	},
+	sacrificial_bow: {
+		name: 'Sacrificial Bow',
+		type: 'bow',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'Energy Recharge',
+		passiveName: 'Composed',
+		passiveDesc:
+			'After damaging an opponent with an Elemental Skill, the skill has a 40/50/60/70/80% chance to end its own CD. Can only occur once every 30/26/22/18/14s.',
+	},
+	sacrificial_fragments: {
+		name: 'Sacrificial Fragments',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Composed',
+		passiveDesc:
+			'After damaging an opponent with an Elemental Skill, the skill has a 40/50/60/70/80% chance to end its own CD. Can only occur once every 30/26/22/18/14s.',
+	},
+	sacrificial_greatsword: {
+		name: 'Sacrificial Greatsword',
+		type: 'claymore',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'Energy Recharge',
+		passiveName: 'Composed',
+		passiveDesc:
+			'After damaging an opponent with an Elemental Skill, the skill has a 40/50/60/70/80% chance to end its own CD. Can only occur once every 30/26/22/18/14s.',
+	},
+	sacrificial_sword: {
+		name: 'Sacrificial Sword',
+		type: 'sword',
+		rarity: 4,
+		baseAttack: 41,
+		subStat: 'Energy Recharge',
+		passiveName: 'Composed',
+		passiveDesc:
+			'After damaging an opponent with an Elemental Skill, the skill has a 40/50/60/70/80% chance to end its own CD. Can only occur once every 30/26/22/18/14s.',
+	},
+	seasoned_hunters_bow: {
+		name: "Seasoned Hunter's Bow",
+		type: 'bow',
+		rarity: 2,
+		baseAttack: 33,
+		subStat: '_',
+		passiveName: '_',
+		passiveDesc: '_',
+	},
+	serpent_spine: {
+		name: 'Serpent Spine',
+		type: 'claymore',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'CRIT Rate',
+		passiveName: 'Wavesplitter',
+		passiveDesc:
+			'Every 4s a character is on the field, they will deal 6% more DMG and take 3% more DMG. This effect has a maximum of 5 stacks and will not be reset if the character leaves the field, but will be cleared when the character takes DMG.',
+	},
+	sharpshooters_oath: {
+		name: "Sharpshooter's Oath",
+		type: 'bow',
+		rarity: 3,
+		baseAttack: 39,
+		subStat: 'CRIT DMG',
+		passiveName: 'Precise',
+		passiveDesc: 'Increases DMG against weak spots by 24/30/36/42/48%.',
+	},
+	silver_sword: {
+		name: 'Silver Sword',
+		type: 'sword',
+		rarity: 2,
+		baseAttack: 33,
+		subStat: '_',
+		passiveName: '_',
+		passiveDesc: '_',
+	},
+	skyrider_greatsword: {
+		name: 'Skyrider Greatsword',
+		type: 'claymore',
+		rarity: 3,
+		baseAttack: 39,
+		subStat: 'Physical DMG Bonus',
+		passiveName: 'Courage',
+		passiveDesc:
+			'On hit, Normal or Charged Attacks increase ATK by 6/7/8/9/10% for 6s. Max 4 stacks. Can only occur once every 0.5s.',
+	},
+	skyrider_sword: {
+		name: 'Skyrider Sword',
+		type: 'sword',
+		rarity: 3,
+		baseAttack: 38,
+		subStat: 'Energy Recharge',
+		passiveName: 'Determination',
+		passiveDesc:
+			'Using an Elemental Burst grants a 12/15/18/21/24% increase in ATK and Movement SPD for 12s.',
+	},
+	skyward_atlas: {
+		name: 'Skyward Atlas',
+		type: 'catalyst',
+		rarity: 5,
+		baseAttack: 45,
+		subStat: 'ATK',
+		passiveName: 'Wandering Clouds',
+		passiveDesc:
+			'Increases Elemental DMG Bonus by 12/15/18/21/24%. Normal Attack hits have a 50% chance to earn the favor of the clouds. which actively seek out nearby enemies to attack for 15s, dealing 160/200/240/280/320% ATK DMG. Can only occur once every 30s.',
+	},
+	skyward_blade: {
+		name: 'Skyward Blade',
+		type: 'sword',
+		rarity: 5,
+		baseAttack: 44,
+		subStat: 'Energy Recharge',
+		passiveName: 'Sky_Piercing Fang',
+		passiveDesc:
+			'CRIT Rate increased by 4%. Gains Skypiercing Might upon using an Elemental Burst:\nIncreases Movement SPD by 10%, increases ATK SPD by 10%, and increases the DMG of Normal and Charged Attack hits by 20% for 12s.',
+	},
+	skyward_harp: {
+		name: 'Skyward Harp',
+		type: 'bow',
+		rarity: 5,
+		baseAttack: 45,
+		subStat: 'CRIT Rate',
+		passiveName: 'Echoing Ballad',
+		passiveDesc:
+			'Increases CRIT DMG by 20/25/30/35/40%. Hits have a 60/70/80/90/100% chance to inflict a small AoE attack, dealing 100% Physical ATK DMG. Can only occur once every 4s.',
+	},
+	skyward_pride: {
+		name: 'Skyward Pride',
+		type: 'claymore',
+		rarity: 5,
+		baseAttack: 45,
+		subStat: 'Energy Recharge',
+		passiveName: 'Sky Ripping Dragon Spine',
+		passiveDesc:
+			'Increases all DMG by 8/10/12/14/16%. After using an Elemental Burst, Normal or Charged Attack, on hit, creates a vacuum blade that does 80/100/120/140/160% Physical DMG to enemies along its path. Lasts for 20s or 8 vacuum blades.',
+	},
+	skyward_spine: {
+		name: 'Skyward Spine',
+		type: 'polearm',
+		rarity: 5,
+		baseAttack: 48,
+		subStat: 'Energy Recharge',
+		passiveName: 'Black Wing',
+		passiveDesc:
+			'Increases CRIT Rate by 8% and increases Normal ATK SPD by 12%. Additionally, Normal and Charged Attacks hits on enemies have a 50% chance to trigger a vacuum blade that deals 40% of ATK as DMG in a small AoE. This effect can occur no more than once every 2s.',
+	},
+	slingshot: {
+		name: 'Slingshot',
+		type: 'bow',
+		rarity: 3,
+		baseAttack: 38,
+		subStat: 'CRIT Rate',
+		passiveName: 'Slingshot',
+		passiveDesc:
+			'If a Normal Attack or Aimed Shot hits a target within 0.3s of being fired, increases DMG by 36/42/48/54/60%; otherwise, it decreases DMG by 10%.',
+	},
+	snow_tombed_starsilver: {
+		name: 'Snow Tombed Starsilver',
+		type: 'claymore',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'Physical DMG Bonus',
+		passiveName: '',
+		passiveDesc:
+			'Hitting an opponent with Normal and Charged Attacks has a 60% chance of forming and dropping an Everfrost Icicle above them, dealing 80% AoE ATK DMG. Opponents affected by Cryo are dealt 200% ATK DMG. Can only occur once every 10s.',
+	},
+	solar_pearl: {
+		name: 'Solar Pearl',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'CRIT Rate',
+		passiveName: 'Solar Shine',
+		passiveDesc:
+			'Normal Attack hits increase Elemental Skill and Elemental Burst DMG by 20/25/30/35/40% for 6s. Likewise, Elemental Skill or Elemental Burst hits increase Normal Attack DMG by 20/25/30/35/40% for 6s.',
+	},
+	song_of_broken_pines: {
+		name: 'Song of Broken Pines',
+		type: 'claymore',
+		rarity: 5,
+		baseAttack: 49,
+		subStat: 'Physical DMG Bonus',
+		passiveName: "Rebel's Banner_Hymn",
+		passiveDesc:
+			"A part of the 'Millennial Movement' that wanders amidst the winds. Increases ATK by 16%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s. When you possess 4 Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the 'Millennial Movement: Banner_Hymn' effect for 12s. 'Millennial Movement: Banner_Hymn' increases Normal ATK SPD by 12% and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the 'Millennial Movement,' buffs of the same type will not stack.",
+	},
+	staff_of_homa: {
+		name: 'Staff of Homa',
+		type: 'polearm',
+		rarity: 5,
+		baseAttack: 46,
+		subStat: 'CRIT DMG',
+		passiveName: 'Reckless Cinnabar',
+		passiveDesc:
+			"HP increased by 20/25/30/35/40%. Additionally, provides an ATK Bonus based on 0.8/1/1.2/1.4/1.6% of the wielder's Max HP. When the wielder's HP is less than 50%, this ATK Bonus is increased by an additional 1/1.2/1.4/1.6/1.8% of Max HP.",
+	},
+	summit_shaper: {
+		name: 'Summit Shaper',
+		type: 'sword',
+		rarity: 5,
+		baseAttack: 46,
+		subStat: 'ATK',
+		passiveName: '',
+		passiveDesc:
+			'Increases Shield Strength by 20/25/30/35/40%. Scoring hits on opponents increases ATK by 4/5/6/7/8% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.',
+	},
+	sword_of_descension: {
+		name: 'Sword_of_Descension',
+		type: 'sword',
+		rarity: '4',
+		subStat: 'ATK',
+		passiveName: 'Descension',
+		passiveDesc:
+			'Hitting enemies with Normal or Charged Attacks grants a 50% chance to deal 200% ATK as DMG in a small AoE. This effect can only occur once every 10s. Additionally, if the Traveler equips the Sword of Descension, their ATK is increased by 66.',
+	},
+	the_alley_flash: {
+		name: 'The Alley Flash',
+		type: 'sword',
+		rarity: 4,
+		baseAttack: 44,
+		subStat: 'CRIT Rate',
+		passiveName: 'Itinerant Hero',
+		passiveDesc:
+			'Continuosly sprinting for at least 1s increases ATK by 28% for 6s. This effect cannot stack.',
+	},
+	the_bell: {
+		name: 'The Bell',
+		type: 'claymore',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'HP',
+		passiveName: 'Rebellious Guardian',
+		passiveDesc:
+			'Taking DMG generates a shield which absorbs DMG up to 20/23/26/29/32% of Max HP. This shield lasts for 10s or until broken, and can only be triggered once every 45s. While protected by the shield, the character gains 12/15/18/21/24% increased DMG.',
+	},
+	the_black_sword: {
+		name: 'The Black Sword',
+		type: 'sword',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'CRIT Rate',
+		passiveName: 'Justice',
+		passiveDesc:
+			'Increases DMG dealt by Normal and Charged Attacks by 20%.\nAdditionally, regenerates 60% of ATK as HP when Normal and Charged Attacks score a CRIT Hit. This effect can occur once every 5s.',
+	},
+	the_flute: {
+		name: 'The Flute',
+		type: 'sword',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'ATK',
+		passiveName: 'Chord',
+		passiveDesc:
+			'Normal or Charged Attacks grant Harmonic on hits. Gaining 5 Harmonics triggers the power of music and deals 100/125/150/175/200% ATK DMG to surrounding enemies. Harmonics last up to 30s, and a maximum of 1 can be gained every 0.5s.',
+	},
+	the_stringless: {
+		name: 'The Stringless',
+		type: 'bow',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Arrowless Song',
+		passiveDesc:
+			'Increases Elemental Skill and Elemental Burst DMG by 24/30/36/42/48%.',
+	},
+	the_unforged: {
+		name: 'The Unforged',
+		type: 'claymore',
+		rarity: 5,
+		baseAttack: 46,
+		subStat: 'ATK',
+		passiveName: 'Golden Majesty',
+		passiveDesc:
+			'Increases Shield Strength by 20%. Scoring hits on opponents increases ATK by 4% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.',
+	},
+	the_viridescent_hunt: {
+		name: 'The Viridescent Hunt',
+		type: 'bow',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'CRIT Rate',
+		passiveName: 'Verdant Wind',
+		passiveDesc:
+			'Upon hit, Normal and Aimed Shot Attacks have a 50% chance to generate a Cyclone, which will continuously attract surrounding enemies, dealing 40% of ATK as DMG to these enemies every 0.5s for 4s. This effect can only occur once every 14s.',
+	},
+	the_widsith: {
+		name: 'The Widsith',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'CRIT DMG',
+		passiveName: 'Debut',
+		passiveDesc:
+			'When the character takes the field, they gain a random theme song for 10s:\nRecitative: Increases Base ATK by 60%\nInterlude: Elemental Mastery is increased by 240\nAria: Increases all Elemental DMG by 48%\nCan only occur once every 30s',
+	},
+	thrilling_tales_of_dragon_slayers: {
+		name: 'Thrilling Tales of Dragon Slayers',
+		type: 'catalyst',
+		rarity: 3,
+		baseAttack: 39,
+		subStat: 'HP',
+		passiveName: 'Legacy',
+		passiveDesc:
+			'When switching characters, the new character taking the field has their ATK increased by 24/30/36/42/48% for 10s. This effect can only occur once every 20s.',
+	},
+	thundering_pulse: {
+		name: 'Thundering Pulse',
+		type: 'bow',
+		rarity: 5,
+		baseAttack: 46,
+		subStat: 'CRIT DMG',
+		passiveName: 'Rule By Thunder',
+		passiveDesc:
+			'Increases ATK by 20% and grants the might of the Thunder Emblem. At stack levels 1/2/3, the Thunder Emblem increases Normal Attack DMG by 12/24/40%. The character will obtain 1 stack of Thunder Emblem in each of the following scenarios: Normal Attack deals DMG (stack lasts 5s), casting Elemental Skill (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stacks duration is calculated independently.',
+	},
+	travelers_handy_sword: {
+		name: "Traveler's Handy Sword",
+		type: 'sword',
+		rarity: 3,
+		baseAttack: 40,
+		subStat: 'DEF',
+		passiveName: 'Journey',
+		passiveDesc:
+			'Each Elemental Orb or Particle collected restores 1/1.25/1.5/1.75/2% HP.',
+	},
+	twin_nephrite: {
+		name: 'Twin Nephrite',
+		type: 'catalyst',
+		rarity: 3,
+		baseAttack: 40,
+		subStat: 'CRIT Rate',
+		passiveName: 'Guerilla Tactic',
+		passiveDesc:
+			'Defeating an enemy increases Movement SPD and ATK by 12/14/16/18/20% for 15s.',
+	},
+	vortex_vanquisher: {
+		name: 'Vortex Vanquisher',
+		type: 'polearm',
+		rarity: 5,
+		baseAttack: 46,
+		subStat: 'ATK',
+		passiveName: 'Rainbow_Piercing Stinger',
+		passiveDesc:
+			'Normal Attack hits have a 20% chance of causing the next Charged Attack performed in the following 10s to deal 40% increased DMG.',
+	},
+	waster_greatsword: {
+		name: 'Waster Greatsword',
+		type: 'claymore',
+		rarity: 1,
+		baseAttack: 23,
+		subStat: '_',
+		passiveName: '_',
+		passiveDesc: '_',
+	},
+	white_iron_greatsword: {
+		name: 'White Iron Greatsword',
+		type: 'claymore',
+		rarity: 3,
+		baseAttack: 39,
+		subStat: 'DEF',
+		passiveName: 'Cull the Weak',
+		passiveDesc: 'Defeating an opponent restores 8/10/12/14/16% HP.',
+	},
+	white_tassel: {
+		name: 'White Tassel',
+		type: 'polearm',
+		rarity: 3,
+		baseAttack: 39,
+		subStat: 'CRIT Rate',
+		passiveName: 'Sharp',
+		passiveDesc: 'Increases Normal Attack DMG by 24/30/36/42/48%.',
+	},
+	whiteblind: {
+		name: 'Whiteblind',
+		type: 'claymore',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'DEF',
+		passiveName: 'Infusion Blade',
+		passiveDesc:
+			'On hit, Normal or Charged Attacks increase Base ATK and DEF by 6/7.5/9/10.5/12% for 6s. Max 4 stacks. Can only occur once every 0.5s.',
+	},
+	windblume_ode: {
+		name: 'Windblume Ode',
+		type: 'bow',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'Elemental Mastery',
+		passiveName: 'Windblume Wish',
+		passiveDesc:
+			'After using an Elemental Skill, receive a boon from the ancient wish of the Windblume, increasing ATK by 16/20/24/28/32% for 6s.',
+	},
+	wine_and_song: {
+		name: 'Wine and Song',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'Energy Recharge',
+		passiveName: 'Wind in the Square',
+		passiveDesc:
+			'For every character in the party who hails from Mondstadt, the character who equips this weapon gains 8/10/12/14/16% ATK increase and 3/3.5/4/4.5/5% Movement SPD increase.',
+	},
+	wolfs_gravestone: {
+		name: "Wolf's Gravestone",
+		type: 'claymore',
+		rarity: 5,
+		baseAttack: 46,
+		subStat: 'ATK',
+		passiveName: 'Wolfish Tracker',
+		passiveDesc:
+			"Increases Base ATK by 20/25/30/35/40%. On hit, attacks against enemies with less than 30% HP increase all party members' Base ATK by 40/50/60/70/80% for 12s. Can only occur once every 30s.",
+	},
+	prototype_amber: {
+		name: 'Prototype Amber',
+		type: 'catalyst',
+		rarity: 4,
+		baseAttack: 42,
+		subStat: 'HP',
+	},
+	prototype_starglitter: {
+		name: 'Prototype Starglitter',
+		type: 'polearm',
+		rarity: 4,
+		baseAttack: 4,
+		subStat: 'Energy Recharge',
+	},
+}

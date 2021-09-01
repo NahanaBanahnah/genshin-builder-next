@@ -6,7 +6,7 @@ export const GlobalDispatchContext = createContext()
 
 const initialState = {
 	STAT_STATE: null,
-	ARTIFACT_STATE: null,
+	ARTIFACT_STATE: false,
 	CHARACTER_STATE: null,
 }
 
