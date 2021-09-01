@@ -24,6 +24,7 @@ const Ascend = ({ ascend }) => {
 				rarity={1}
 				size="small"
 				tooltip
+				mapId={Locals[LOCAL].mapId}
 			/>
 			{BOSS && (
 				<Card
@@ -42,6 +43,7 @@ const Ascend = ({ ascend }) => {
 				rarity={3}
 				size="small"
 				tooltip
+				mapId={Gems[GEM].mapId}
 			/>
 			<Card
 				type="common"
@@ -49,7 +51,8 @@ const Ascend = ({ ascend }) => {
 				name={Commons[COMMON][3]}
 				rarity={3}
 				size="small"
-				tooltip
+				mapLink
+				mapId={Commons[COMMON].mapId}
 			/>
 		</div>
 	)

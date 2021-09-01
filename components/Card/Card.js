@@ -7,7 +7,7 @@ import Zoom from '@material-ui/core/Zoom'
 import Image from 'next/image'
 import styles from './card.module.scss'
 
-const Card = ({ qty, size, type, id, rarity, name, caption }) => {
+const Card = ({ qty, size, type, id, rarity, name, caption, mapId }) => {
 	const useStylesBootstrap = makeStyles(theme => ({
 		arrow: {
 			color: theme.palette.grey[900],
@@ -25,13 +25,42 @@ const Card = ({ qty, size, type, id, rarity, name, caption }) => {
 	const [, setLoaded] = useState(false)
 
 	const QTY = qty ? null : styles.noQty
-	const cssClass = [styles.card, styles[size], QTY]
+	const CSS_CLASS = [styles.card, styles[size], QTY]
+	const MAP_URL =
+		'https://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=en-us#/map/2?shown_types='
 
-	const width = styles[`${size}Px`]
-	const materialSrc =
+	const WIDTH = styles[`${size}Px`]
+	const MATERIAL_SRC =
 		type === 'gem' || type === 'common'
 			? `/img/${type}/${id}_${rarity}.webp`
 			: `/img/${type}/${id}.webp`
+
+	const CARD = (
+		<div className={CSS_CLASS.join(' ')} data-tip={name}>
+			<div className={styles.imageHolder}>
+				<Image
+					src={`/img/rarity/rarity_${rarity}.webp`}
+					alt="card"
+					width={WIDTH}
+					height={WIDTH}
+					onLoad={() => setBgLoaded(true)}
+				/>
+				<div className={styles.image}>
+					<Image
+						src={MATERIAL_SRC}
+						alt="card"
+						width={WIDTH}
+						height={WIDTH}
+						onLoad={() => setLoaded(true)}
+					/>
+				</div>
+			</div>
+
+			{caption && <h2>{name}</h2>}
+		</div>
+	)
+
+	const TYPE_LINK = Array.isArray(mapId) ? mapId.join(',') : mapId
 
 	return (
 		<Tooltip
@@ -41,28 +70,16 @@ const Card = ({ qty, size, type, id, rarity, name, caption }) => {
 			classes={useStylesBootstrap()}
 			arrow
 		>
-			<div className={cssClass.join(' ')} data-tip={name}>
-				<div className={styles.imageHolder}>
-					<Image
-						src={`/img/rarity/rarity_${rarity}.webp`}
-						alt="card"
-						width={width}
-						height={width}
-						onLoad={() => setBgLoaded(true)}
-					/>
-					<div className={styles.image}>
-						<Image
-							src={materialSrc}
-							alt="card"
-							width={width}
-							height={width}
-							onLoad={() => setLoaded(true)}
-						/>
-					</div>
-				</div>
-
-				{caption && <h2>{name}</h2>}
-			</div>
+			{mapId ? (
+				<a
+					href={`${MAP_URL}${TYPE_LINK}&center=219.00,-626.00&zoom=-2.00`}
+					target="_new"
+				>
+					{CARD}
+				</a>
+			) : (
+				CARD
+			)}
 		</Tooltip>
 	)
 }
@@ -70,6 +87,7 @@ const Card = ({ qty, size, type, id, rarity, name, caption }) => {
 Card.defaultProps = {
 	caption: false,
 	qty: null,
+	mapId: false,
 }
 
 Card.propTypes = {
@@ -80,6 +98,11 @@ Card.propTypes = {
 	name: PropTypes.string.isRequired,
 	caption: PropTypes.bool,
 	rarity: PropTypes.number.isRequired,
+	mapId: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.bool,
+		PropTypes.instanceOf(Array),
+	]),
 }
 
 export default Card
