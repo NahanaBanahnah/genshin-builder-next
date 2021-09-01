@@ -6,6 +6,7 @@ import { GlobalDispatchContext } from '../../context/GlobalContextProvider'
 import Artifacts from '../../data/artifacts'
 import Characters from '../../data/characters'
 import Stats from '../../data/stats'
+import Weapons from '../../data/weapons'
 
 const Nav = () => {
 	const dispatch = useContext(GlobalDispatchContext)
@@ -13,6 +14,11 @@ const Nav = () => {
 	const CHARACTER_OPTIONS = Object.values(Characters).map(ele => ({
 		id: ele.id,
 		name: ele.name,
+	}))
+	const WEAPON_OPTIONS = Object.entries(Weapons).map(ele => ({
+		id: ele[0],
+		name: ele[1].name,
+		type: ele[1].type.toUpperCase(),
 	}))
 
 	const stats = [...Stats]
@@ -30,6 +36,12 @@ const Nav = () => {
 		const value = obj ? obj.id : null
 
 		dispatch({ type: 'SET_ARTIFACT', payload: value })
+	}
+
+	const setWeapon = obj => {
+		const value = obj ? obj.id : null
+
+		dispatch({ type: 'SET_WEAPON', payload: value })
 	}
 
 	const setCharacter = obj => {
@@ -53,34 +65,47 @@ const Nav = () => {
 				Filter
 				<Select
 					options={CHARACTER_OPTIONS}
-					id="id"
 					title="name"
-					size={250}
+					size={150}
+					menuSize={250}
 					onChangeFunction={e => setCharacter(e)}
 					label="Character"
+					name="character"
+				/>
+				<Select
+					options={WEAPON_OPTIONS}
+					groupBy="type"
+					sort="type"
+					title="name"
+					size={150}
+					menuSize={250}
+					onChangeFunction={e => setWeapon(e)}
+					label="Weapon"
+					name="weapon"
 				/>
 				<Select
 					options={Artifacts}
-					id="id"
 					title="name"
-					size={250}
+					size={150}
+					menuSize={250}
 					onChangeFunction={e => setArtifact(e)}
 					label="Artifact"
+					name="artifact"
 				/>
 				<Select
 					options={sandOptions}
 					name="sand"
-					id="id"
 					title="name"
 					size={150}
+					menuSize={250}
 					onChangeFunction={e => setStat(e)}
 					label="Sand"
 				/>
 				<Select
 					options={glassOptions}
 					name="glass"
-					id="id"
 					size={150}
+					menuSize={250}
 					title="name"
 					onChangeFunction={e => setStat(e)}
 					label="Glass"
@@ -88,8 +113,8 @@ const Nav = () => {
 				<Select
 					options={crownOptions}
 					name="crown"
-					id="id"
 					size={150}
+					menuSize={250}
 					title="name"
 					onChangeFunction={e => setStat(e)}
 					label="Crown"

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Weapons from '../../data/weapons'
 
 const Weapon = ({ id }) => {
-	const { name, rating } = Weapons.find(e => e.id === id)
+	const { name, rarity } = Weapons[id]
 
 	const RATE = {
 		3: 'three',
@@ -27,7 +27,7 @@ const Weapon = ({ id }) => {
 				blurDataURL={`/_next/image?url=${IMG}&w=32&q=10`}
 				onLoad={() => setLoaded(true)}
 			/>
-			<div className={`${RATE[rating]}-star`}>{name}</div>
+			<div className={`${RATE[rarity]}-star`}>{name}</div>
 		</>
 	)
 }

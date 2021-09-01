@@ -23,7 +23,7 @@ const Build = ({
 	crown,
 	subStats,
 }) => {
-	const { ARTIFACT_STATE, CHARACTER_STATE, STAT_STATE } =
+	const { ARTIFACT_STATE, CHARACTER_STATE, STAT_STATE, WEAPON_STATE } =
 		useContext(GlobalStateContext)
 
 	// ========== Set Up Windowing
@@ -74,11 +74,15 @@ const Build = ({
 		}
 
 		let artifactIsSet = true
+		let weaponIsSet = true
 		let characterIsSet = true
 		let statIsSet = true
 
 		if (ARTIFACT_STATE) {
 			artifactIsSet = artifactArray.find(e => e.id === ARTIFACT_STATE)
+		}
+		if (WEAPON_STATE) {
+			weaponIsSet = weapon.find(e => e === WEAPON_STATE)
 		}
 
 		if (CHARACTER_STATE) {
@@ -91,13 +95,17 @@ const Build = ({
 			)
 		}
 
-		setFilter(!artifactIsSet || !characterIsSet || !statIsSet)
+		setFilter(
+			!artifactIsSet || !characterIsSet || !statIsSet || !weaponIsSet
+		)
 	}, [
 		ARTIFACT_STATE,
 		CHARACTER_STATE,
 		STAT_STATE,
+		WEAPON_STATE,
 		artifactArray,
 		id,
+		weapon,
 		crown,
 		glass,
 		sand,
