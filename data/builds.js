@@ -1416,4 +1416,80 @@ module.exports = [
 		crown: ['atkp', 'crit_dmg'],
 		sub: ['atkp', 'crit_dmg'],
 	},
+	{
+		name: 'Raiden Shogun',
+		id: 'baal',
+		element: 'electro',
+		build: 'Electro Sub DPS',
+		artifact: [
+			{
+				id: 'emblem_of_severed_fate',
+				amount: 4,
+			},
+		],
+		weapon: ['engulfing_lightning', 'skyward_spine', 'the_catch'],
+		sand: ['energy_recharge', 'atkp'],
+		glass: ['electro_dmg_bonus', 'atkp'],
+		crown: ['crit_rate', 'crit_dmg'],
+		sub: ['atkp', 'crit_dmg', 'crit_rate', 'energy_recharge'],
+	},
+	{
+		name: 'Raiden Shogun',
+		id: 'baal',
+		element: 'electro',
+		build: 'Electro Main DPS',
+		artifact: [
+			{
+				id: 'emblem_of_severed_fate',
+				amount: 2,
+			},
+			{
+				id: 'thundering_fury',
+				amount: 2,
+			},
+		],
+		weapon: [
+			'engulfing_lightning',
+			'staff_of_homa',
+			'prototype_starglitter',
+		],
+		sand: ['atkp'],
+		glass: ['electro_dmg_bonus'],
+		crown: ['crit_rate', 'crit_dmg'],
+		sub: ['atkp', 'crit_dmg', 'crit_rate'],
+	},
+	{
+		name: 'Sara',
+		id: 'sara',
+		element: 'electro',
+		build: 'Electro Sub DPS',
+		artifact: [
+			{
+				id: 'thundering_fury',
+				amount: 4,
+			},
+		],
+		weapon: ['elegy_for_the_end', 'skyward_harp', 'alley_hunter'],
+		sand: ['atkp'],
+		glass: ['electro_dmg_bonus'],
+		crown: ['crit_rate', 'crit_dmg'],
+		sub: ['atkp', 'crit_dmg', 'crit_rate'],
+	},
+	{
+		name: 'Sara',
+		id: 'sara',
+		element: 'electro',
+		build: 'Electro Burst Sub-DPS',
+		artifact: [
+			{
+				id: 'noblesse_oblige',
+				amount: 4,
+			},
+		],
+		weapon: ['skyward_harp', 'favonius_warbow', 'sacrificial_bow'],
+		sand: ['atkp', 'energy_recharge'],
+		glass: ['electro_dmg_bonus'],
+		crown: ['crit_rate', 'crit_dmg'],
+		sub: ['atkp', 'crit_dmg', 'crit_rate', 'energy_recharge'],
+	},
 ]

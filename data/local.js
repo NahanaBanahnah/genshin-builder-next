@@ -79,4 +79,12 @@ module.exports = {
 		name: 'Naku Weed',
 		mapId: 197,
 	},
+	amakumo_fruit: {
+		name: 'Amakumo Fruit',
+		mapId: 228,
+	},
+	dendrobium: {
+		name: 'Dendrobium',
+		mapId: 198,
+	},
 }

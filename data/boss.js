@@ -32,4 +32,7 @@ module.exports = {
 	smoldering_pearl: {
 		name: 'Smoldering pearl',
 	},
+	storm_beads: {
+		name: 'Storm Beads',
+	},
 }
