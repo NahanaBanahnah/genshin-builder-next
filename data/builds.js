@@ -1,6 +1,5 @@
 module.exports = [
 	{
-		name: 'Traveler (Anemo)',
 		id: 'traveler',
 		element: 'anemo',
 		build: 'Sub DPS',
@@ -17,7 +16,6 @@ module.exports = [
 		sub: ['energy_recharge', 'crit_rate'],
 	},
 	{
-		name: 'Jean',
 		id: 'jean',
 		element: 'anemo',
 		build: 'Sub DPS Build',
@@ -38,7 +36,6 @@ module.exports = [
 		sub: ['atkp', 'energy_recharge', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Jean',
 		id: 'jean',
 		element: 'anemo',
 		build: 'Support Build',
@@ -55,7 +52,6 @@ module.exports = [
 		sub: ['atkp', 'energy_recharge', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Venti',
 		id: 'venti',
 		element: 'anemo',
 		build: 'Swirl Sub DPS',
@@ -72,7 +68,6 @@ module.exports = [
 		sub: ['energy_recharge', 'crit_rate', 'crit_dmg'],
 	},
 	{
-		name: 'Venti',
 		id: 'venti',
 		element: 'anemo',
 		build: 'Burst Sub DPS',
@@ -89,7 +84,6 @@ module.exports = [
 		sub: ['energy_recharge', 'crit_rate', 'crit_dmg', 'elemental_mastery'],
 	},
 	{
-		name: 'Sucrose',
 		id: 'sucrose',
 		element: 'anemo',
 		build: 'Swirl Sub DPS',
@@ -110,7 +104,6 @@ module.exports = [
 		sub: ['energy_recharge', 'elemental_mastery'],
 	},
 	{
-		name: 'Xiao',
 		id: 'xiao',
 		element: 'anemo',
 		build: 'DPS Build',
@@ -135,7 +128,6 @@ module.exports = [
 		sub: ['atkp', 'energy_recharge', 'crit_dmg'],
 	},
 	{
-		name: 'Kazuha',
 		id: 'kazuha',
 		element: 'anemo',
 		build: 'Sub DPS',
@@ -152,7 +144,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate', 'elemental_mastery'],
 	},
 	{
-		name: 'Kazuha',
 		id: 'kazuha',
 		element: 'anemo',
 		build: 'Anemo Support',
@@ -175,7 +166,6 @@ module.exports = [
 		],
 	},
 	{
-		name: 'Sayu',
 		id: 'sayu',
 		element: 'anemo',
 		build: 'Anemo Sub DPS',
@@ -196,7 +186,6 @@ module.exports = [
 		sub: ['energy_recharge', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Sayu',
 		id: 'sayu',
 		element: 'anemo',
 		build: 'Hybrid Support',
@@ -213,7 +202,6 @@ module.exports = [
 		sub: ['atkp', 'energy_recharge', 'elemental_mastery'],
 	},
 	{
-		name: 'Eula',
 		id: 'eula',
 		element: 'cryo',
 		build: 'Physical Main DPS',
@@ -234,7 +222,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Eula',
 		id: 'eula',
 		element: 'cryo',
 		build: 'Physical Main DPS ALTERNATIVE',
@@ -259,7 +246,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate', 'energy_recharge'],
 	},
 	{
-		name: 'Rosaria',
 		id: 'rosaria',
 		element: 'cryo',
 		build: 'Physical Main DPS',
@@ -284,7 +270,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Rosaria',
 		id: 'rosaria',
 		element: 'cryo',
 		build: 'Cryo Sub-DPS',
@@ -305,7 +290,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Ayaka',
 		id: 'ayaka',
 		element: 'cryo',
 		build: 'Hard-hitting Cryo DPS',
@@ -326,7 +310,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Ayaka',
 		id: 'ayaka',
 		element: 'cryo',
 		build: 'Cryo Burst DPS',
@@ -347,7 +330,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Kaeya',
 		id: 'kaeya',
 		element: 'cryo',
 		build: 'Cryo Burst Sub DPS',
@@ -368,7 +350,6 @@ module.exports = [
 		sub: ['energy_recharge', 'elemental_mastery'],
 	},
 	{
-		name: 'Chongyun',
 		id: 'chongyun',
 		element: 'cryo',
 		build: 'Cryo Sub DPS Build',
@@ -389,7 +370,6 @@ module.exports = [
 		sub: ['energy_recharge', 'crit_rate', 'crit_dmg'],
 	},
 	{
-		name: 'Chongyun',
 		id: 'chongyun',
 		element: 'cryo',
 		build: 'Cryo DPS Build',
@@ -412,7 +392,6 @@ module.exports = [
 		],
 	},
 	{
-		name: 'Qiqi',
 		id: 'qiqi',
 		element: 'cryo',
 		build: 'Hybrid Cryo Support',
@@ -429,7 +408,6 @@ module.exports = [
 		sub: ['atkp', 'energy_recharge'],
 	},
 	{
-		name: 'Qiqi',
 		id: 'qiqi',
 		element: 'cryo',
 		build: 'Full Healer',
@@ -450,7 +428,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'energy_recharge'],
 	},
 	{
-		name: 'Diona',
 		id: 'diona',
 		element: 'cryo',
 		build: 'Hybrid Support',
@@ -467,7 +444,6 @@ module.exports = [
 		sub: ['energy_recharge', 'hp', 'hpp'],
 	},
 	{
-		name: 'Diona',
 		id: 'diona',
 		element: 'cryo',
 		build: 'Hybrid Support 2',
@@ -484,7 +460,6 @@ module.exports = [
 		sub: ['energy_recharge', 'hp', 'hpp'],
 	},
 	{
-		name: 'Ganyu',
 		id: 'ganyu',
 		element: 'cryo',
 		build: 'Charge Shot DPS',
@@ -501,7 +476,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg'],
 	},
 	{
-		name: 'Ganyu',
 		id: 'ganyu',
 		element: 'cryo',
 		build: 'Cryo Sub DPS',
@@ -522,7 +496,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg'],
 	},
 	{
-		name: 'Traveler (Electro)',
 		id: 'traveler',
 		element: 'electro',
 		build: 'Electro Sub DPS',
@@ -539,7 +512,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate', 'energy_recharge'],
 	},
 	{
-		name: 'Traveler (Electro)',
 		id: 'traveler',
 		element: 'electro',
 		build: 'Electro Burst Support',
@@ -556,7 +528,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate', 'energy_recharge'],
 	},
 	{
-		name: 'Lisa',
 		id: 'lisa',
 		element: 'electro',
 		build: 'Electro Sub DPS',
@@ -573,7 +544,6 @@ module.exports = [
 		sub: ['elemental_mastery', 'energy_recharge', 'atkp'],
 	},
 	{
-		name: 'Razor',
 		id: 'razor',
 		element: 'electro',
 		build: 'Pure ATK DPS',
@@ -590,7 +560,6 @@ module.exports = [
 		sub: ['atkp', 'crit_rate', 'crit_dmg'],
 	},
 	{
-		name: 'Razor',
 		id: 'razor',
 		element: 'electro',
 		build: 'Shielded Main DPS',
@@ -611,7 +580,6 @@ module.exports = [
 		sub: ['atkp', 'crit_rate', 'crit_dmg', 'energy_recharge'],
 	},
 	{
-		name: 'Fischl',
 		id: 'fischl',
 		element: 'electro',
 		build: 'Electro Ranged DPS',
@@ -632,7 +600,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg'],
 	},
 	{
-		name: 'Fischl',
 		id: 'fischl',
 		element: 'electro',
 		build: 'Electro Sub DPS',
@@ -649,7 +616,6 @@ module.exports = [
 		sub: ['atkp', 'crit_rate', 'crit_dmg'],
 	},
 	{
-		name: 'Beidou',
 		id: 'beidou',
 		element: 'electro',
 		build: 'Electro Main DPS',
@@ -670,7 +636,6 @@ module.exports = [
 		sub: ['atkp', 'energy_recharge', 'hp', 'crit_rate'],
 	},
 	{
-		name: 'Beidou',
 		id: 'beidou',
 		element: 'electro',
 		build: 'Parry Main DPS',
@@ -687,7 +652,6 @@ module.exports = [
 		sub: ['atkp', 'crit_rate', 'crit_dmg', 'energy_recharge', 'hp'],
 	},
 	{
-		name: 'Keqing',
 		id: 'keqing',
 		element: 'electro',
 		build: 'Electro Main DPS',
@@ -708,7 +672,6 @@ module.exports = [
 		sub: ['atkp', 'crit_rate', 'crit_dmg'],
 	},
 	{
-		name: 'Keqing',
 		id: 'keqing',
 		element: 'electro',
 		build: 'Physical DPS',
@@ -733,7 +696,6 @@ module.exports = [
 		sub: ['atkp', 'crit_rate', 'crit_dmg'],
 	},
 	{
-		name: 'Albedo',
 		id: 'albedo',
 		element: 'geo',
 		build: 'Geo Sub DPS',
@@ -754,7 +716,6 @@ module.exports = [
 		sub: ['crit_rate', 'crit_dmg', 'defp'],
 	},
 	{
-		name: 'Albedo',
 		id: 'albedo',
 		element: 'geo',
 		build: 'Geo Sub DPS 2',
@@ -775,7 +736,6 @@ module.exports = [
 		sub: ['def', 'crit_rate', 'crit_dmg'],
 	},
 	{
-		name: 'Traveler (Geo)',
 		id: 'traveler',
 		element: 'geo',
 		build: 'Geo Sub DPS',
@@ -796,7 +756,6 @@ module.exports = [
 		sub: ['atkp', 'energy_recharge'],
 	},
 	{
-		name: 'Traveler (Geo)',
 		id: 'traveler',
 		element: 'geo',
 		build: 'Burst Sub DPS',
@@ -813,7 +772,6 @@ module.exports = [
 		sub: ['energy_recharge', 'atkp'],
 	},
 	{
-		name: 'Noelle',
 		id: 'noelle',
 		element: 'geo',
 		build: 'Shielded DPS',
@@ -830,7 +788,6 @@ module.exports = [
 		sub: ['defp', 'crit_dmg'],
 	},
 	{
-		name: 'Noelle',
 		id: 'noelle',
 		element: 'geo',
 		build: 'Hybrid DPS',
@@ -847,7 +804,6 @@ module.exports = [
 		sub: ['defp', 'atkp', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Ningguang',
 		id: 'ningguang',
 		element: 'geo',
 		build: 'Geo Burst DPS',
@@ -868,7 +824,6 @@ module.exports = [
 		sub: ['atkp', 'crit_rate', 'crit_dmg'],
 	},
 	{
-		name: 'Ningguang',
 		id: 'ningguang',
 		element: 'geo',
 		build: 'Geo Burst DPS ALTERNATIVE',
@@ -890,7 +845,6 @@ module.exports = [
 		sub: ['crit_rate', 'crit_dmg', 'atkp'],
 	},
 	{
-		name: 'zhongli',
 		id: 'zhongli',
 		element: 'geo',
 		build: 'Geo Sub DPS',
@@ -916,7 +870,6 @@ module.exports = [
 		sub: ['atkp', 'hp', 'crit_dmg', 'crit_rate', 'energy_recharge'],
 	},
 	{
-		name: 'zhongli',
 		id: 'zhongli',
 		element: 'geo',
 		build: 'Burst Sub DPS',
@@ -933,7 +886,6 @@ module.exports = [
 		sub: ['hpp', 'energy_recharge', 'atkp', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Barbara',
 		id: 'barbara',
 		element: 'hydro',
 		build: 'Full Healer',
@@ -954,7 +906,6 @@ module.exports = [
 		sub: ['hp'],
 	},
 	{
-		name: 'Mona',
 		id: 'mona',
 		element: 'hydro',
 		build: 'Burst Sub DPS',
@@ -975,7 +926,6 @@ module.exports = [
 		sub: ['crit_dmg', 'crit_rate', 'atkp', 'elemental_mastery'],
 	},
 	{
-		name: 'Mona',
 		id: 'mona',
 		element: 'hydro',
 		build: 'Hydro Sub DPS',
@@ -996,7 +946,6 @@ module.exports = [
 		sub: ['crit_dmg', 'crit_rate', 'atkp', 'elemental_mastery'],
 	},
 	{
-		name: 'Xingqiu',
 		id: 'xingqiu',
 		element: 'hydro',
 		build: 'Hydro Sub DPS',
@@ -1017,7 +966,6 @@ module.exports = [
 		sub: ['energy_recharge', 'crit_dmg', 'crit_rate', 'elemental_mastery'],
 	},
 	{
-		name: 'Xingqiu',
 		id: 'xingqiu',
 		element: 'hydro',
 		build: 'Burst Sub DPS',
@@ -1038,7 +986,6 @@ module.exports = [
 		sub: ['energy_recharge', 'atkp', 'hp', 'crit_rate', 'crit_dmg'],
 	},
 	{
-		name: 'tartaglia',
 		id: 'tartaglia',
 		element: 'hydro',
 		build: 'Hydro Main DPS',
@@ -1055,7 +1002,6 @@ module.exports = [
 		sub: ['atkp', 'crit_rate', 'crit_dmg'],
 	},
 	{
-		name: 'tartaglia',
 		id: 'tartaglia',
 		element: 'hydro',
 		build: 'Sub DPS',
@@ -1076,7 +1022,6 @@ module.exports = [
 		sub: ['crit_rate', 'atkp', 'elemental_mastery'],
 	},
 	{
-		name: 'Yanfei',
 		id: 'yanfei',
 		element: 'pyro',
 		build: 'Pyro Main DPS',
@@ -1097,7 +1042,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Yanfei',
 		id: 'yanfei',
 		element: 'pyro',
 		build: 'Charged Attack DPS',
@@ -1118,7 +1062,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Hu Tao',
 		id: 'hu_tao',
 		element: 'pyro',
 		build: 'Pyro DPS',
@@ -1135,7 +1078,6 @@ module.exports = [
 		sub: ['hp', 'crit_rate', 'crit_dmg'],
 	},
 	{
-		name: 'Hu Tao',
 		id: 'hu_tao',
 		element: 'pyro',
 		build: 'Burst Main DPS',
@@ -1160,7 +1102,6 @@ module.exports = [
 		sub: ['hp', 'crit_rate', 'crit_dmg'],
 	},
 	{
-		name: 'Amber',
 		id: 'amber',
 		element: 'pyro',
 		build: 'Critical Aim Build',
@@ -1177,7 +1118,6 @@ module.exports = [
 		sub: ['crit_rate', 'crit_dmg', 'atkp'],
 	},
 	{
-		name: 'Amber',
 		id: 'amber',
 		element: 'pyro',
 		build: 'Pyro Sub DPS',
@@ -1194,7 +1134,6 @@ module.exports = [
 		sub: ['energy_recharge', 'elemental_mastery'],
 	},
 	{
-		name: 'Diluc',
 		id: 'diluc',
 		element: 'pyro',
 		build: 'Pure Pyro DPS',
@@ -1211,7 +1150,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg'],
 	},
 	{
-		name: 'Diluc',
 		id: 'diluc',
 		element: 'pyro',
 		build: 'Pyro DPS',
@@ -1232,7 +1170,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg'],
 	},
 	{
-		name: 'Klee',
 		id: 'klee',
 		element: 'pyro',
 		build: 'Pyro DPS',
@@ -1253,7 +1190,6 @@ module.exports = [
 		sub: ['atkp', 'elemental_mastery', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Klee',
 		id: 'klee',
 		element: 'pyro',
 		build: 'Charge Attack DPS',
@@ -1275,7 +1211,6 @@ module.exports = [
 		sub: ['atkp', 'crit_rate', 'crit_dmg', 'elemental_mastery'],
 	},
 	{
-		name: 'Yoimiya',
 		id: 'yoimiya',
 		element: 'pyro',
 		build: 'Hard-hitting Pyro DPS',
@@ -1292,7 +1227,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Yoimiya',
 		id: 'yoimiya',
 		element: 'pyro',
 		build: 'Pure Pyro DPS',
@@ -1309,7 +1243,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Bennett',
 		id: 'bennett',
 		element: 'pyro',
 		build: 'Pyro Burst Support',
@@ -1326,7 +1259,6 @@ module.exports = [
 		sub: ['atkp', 'energy_recharge', 'hp'],
 	},
 	{
-		name: 'Xiangling',
 		id: 'xiangling',
 		element: 'pyro',
 		build: 'Pyro Sub DPS',
@@ -1352,7 +1284,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate', 'elemental_mastery'],
 	},
 	{
-		name: 'Xiangling',
 		id: 'xiangling',
 		element: 'pyro',
 		build: 'Burst Sub DPS',
@@ -1369,7 +1300,6 @@ module.exports = [
 		sub: ['atkp', 'elemental_mastery', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Xinyan',
 		id: 'xinyan',
 		element: 'pyro',
 		build: 'Physical Burst DPS',
@@ -1395,7 +1325,6 @@ module.exports = [
 		sub: ['atkp', 'crit_rate'],
 	},
 	{
-		name: 'Xinyan',
 		id: 'xinyan',
 		element: 'pyro',
 		build: 'Shield DPS',
@@ -1417,7 +1346,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg'],
 	},
 	{
-		name: 'Raiden Shogun',
 		id: 'baal',
 		element: 'electro',
 		build: 'Electro Sub DPS',
@@ -1434,7 +1362,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate', 'energy_recharge'],
 	},
 	{
-		name: 'Raiden Shogun',
 		id: 'baal',
 		element: 'electro',
 		build: 'Electro Main DPS',
@@ -1459,7 +1386,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Sara',
 		id: 'sara',
 		element: 'electro',
 		build: 'Electro Sub DPS',
@@ -1476,7 +1402,6 @@ module.exports = [
 		sub: ['atkp', 'crit_dmg', 'crit_rate'],
 	},
 	{
-		name: 'Sara',
 		id: 'sara',
 		element: 'electro',
 		build: 'Electro Burst Sub-DPS',

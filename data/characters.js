@@ -1,6 +1,7 @@
 module.exports = {
 	albedo: {
 		id: 'albedo',
+		rarity: 5,
 		name: 'Albedo',
 		element: 'geo',
 		weapon_type: 'sword',
@@ -13,6 +14,7 @@ module.exports = {
 	},
 	amber: {
 		id: 'amber',
+		rarity: 4,
 		name: 'Amber',
 		element: 'pyro',
 		weapon_type: 'bow',
@@ -26,6 +28,7 @@ module.exports = {
 	ayaka: {
 		id: 'ayaka',
 		name: 'Ayaka',
+		rarity: 5,
 		element: 'cryo',
 		weapon_type: 'sword',
 		ascend: {
@@ -38,6 +41,7 @@ module.exports = {
 	barbara: {
 		id: 'barbara',
 		name: 'Barbara',
+		rarity: 4,
 		element: 'hydro',
 		weapon_type: 'catalyst',
 		ascend: {
@@ -50,6 +54,7 @@ module.exports = {
 	beidou: {
 		id: 'beidou',
 		name: 'Beidou',
+		rarity: 4,
 		element: 'electro',
 		weapon_type: 'claymore',
 		ascend: {
@@ -61,6 +66,7 @@ module.exports = {
 	},
 	bennett: {
 		id: 'bennett',
+		rarity: 4,
 		name: 'Bennett',
 		element: 'pyro',
 		weapon_type: 'sword',
@@ -74,6 +80,7 @@ module.exports = {
 	chongyun: {
 		id: 'chongyun',
 		name: 'Chongyun',
+		rarity: 4,
 		element: 'cryo',
 		weapon_type: 'claymore',
 		ascend: {
@@ -86,6 +93,7 @@ module.exports = {
 	diluc: {
 		id: 'diluc',
 		name: 'Diluc',
+		rarity: 5,
 		element: 'pyro',
 		weapon_type: 'claymore',
 		ascend: {
@@ -98,6 +106,7 @@ module.exports = {
 	diona: {
 		id: 'diona',
 		name: 'Diona',
+		rarity: 4,
 		element: 'cryo',
 		weapon_type: 'bow',
 		ascend: {
@@ -110,6 +119,7 @@ module.exports = {
 	eula: {
 		id: 'eula',
 		name: 'Eula',
+		rarity: 5,
 		element: 'cryo',
 		weapon_type: 'claymore',
 		ascend: {
@@ -122,6 +132,7 @@ module.exports = {
 	fischl: {
 		id: 'fischl',
 		name: 'Fischl',
+		rarity: 4,
 		element: 'electro',
 		weapon_type: 'bow',
 		ascend: {
@@ -134,6 +145,7 @@ module.exports = {
 	ganyu: {
 		id: 'ganyu',
 		name: 'Ganyu',
+		rarity: 5,
 		element: 'cryo',
 		weapon_type: 'bow',
 		ascend: {
@@ -145,6 +157,7 @@ module.exports = {
 	},
 	hu_tao: {
 		id: 'hu tao',
+		rarity: 5,
 		name: 'Hu Tao',
 		element: 'pyro',
 		weapon_type: 'polearm',
@@ -158,6 +171,7 @@ module.exports = {
 	jean: {
 		id: 'jean',
 		name: 'Jean',
+		rarity: 5,
 		element: 'anemo',
 		weapon_type: 'sword',
 		ascend: {
@@ -170,6 +184,7 @@ module.exports = {
 	kaeya: {
 		id: 'kaeya',
 		name: 'Kaeya',
+		rarity: 4,
 		element: 'cryo',
 		weapon_type: 'sword',
 		ascend: {
@@ -181,6 +196,7 @@ module.exports = {
 	},
 	kazuha: {
 		id: 'kazuha',
+		rarity: 5,
 		name: 'Kazuha',
 		element: 'anemo',
 		weapon_type: 'sword',
@@ -193,6 +209,7 @@ module.exports = {
 	},
 	keqing: {
 		id: 'keqing',
+		rarity: 5,
 		name: 'Keqing',
 		element: 'electro',
 		weapon_type: 'sword',
@@ -205,6 +222,7 @@ module.exports = {
 	},
 	klee: {
 		id: 'klee',
+		rarity: 5,
 		name: 'Klee',
 		element: 'pyro',
 		weapon_type: 'catalyst',
@@ -217,6 +235,7 @@ module.exports = {
 	},
 	lisa: {
 		id: 'lisa',
+		rarity: 4,
 		name: 'Lisa',
 		element: 'electro',
 		weapon_type: 'catalyst',
@@ -230,6 +249,7 @@ module.exports = {
 	mona: {
 		id: 'mona',
 		name: 'Mona',
+		rarity: 5,
 		element: 'hydro',
 		weapon_type: 'catalyst',
 		ascend: {
@@ -241,6 +261,7 @@ module.exports = {
 	},
 	ningguang: {
 		id: 'ningguang',
+		rarity: 4,
 		name: 'Ningguang',
 		element: 'geo',
 		weapon_type: 'catalyst',
@@ -253,6 +274,7 @@ module.exports = {
 	},
 	noelle: {
 		id: 'noelle',
+		rarity: 4,
 		name: 'Noelle',
 		element: 'geo',
 		weapon_type: 'claymore',
@@ -265,6 +287,7 @@ module.exports = {
 	},
 	qiqi: {
 		id: 'qiqi',
+		rarity: 5,
 		name: 'Qiqi',
 		element: 'cryo',
 		weapon_type: 'sword',
@@ -277,6 +300,7 @@ module.exports = {
 	},
 	razor: {
 		id: 'razor',
+		rarity: 4,
 		name: 'Razor',
 		element: 'electro',
 		weapon_type: 'claymore',
@@ -289,6 +313,7 @@ module.exports = {
 	},
 	rosaria: {
 		id: 'rosaria',
+		rarity: 4,
 		name: 'Rosaria',
 		element: 'cryo',
 		weapon_type: 'polearm',
@@ -301,6 +326,7 @@ module.exports = {
 	},
 	sayu: {
 		id: 'sayu',
+		rarity: 4,
 		name: 'Sayu',
 		ascend: {
 			local: 'crystal_marrow',
@@ -311,6 +337,7 @@ module.exports = {
 	},
 	sucrose: {
 		id: 'sucrose',
+		rarity: 4,
 		name: 'Sucrose',
 		element: 'anemo',
 		weapon_type: 'catalyst',
@@ -323,6 +350,7 @@ module.exports = {
 	},
 	tartaglia: {
 		id: 'tartaglia',
+		rarity: 5,
 		name: 'Tartaglia',
 		element: 'hydro',
 		weapon_type: 'bow',
@@ -335,6 +363,7 @@ module.exports = {
 	},
 	traveler: {
 		id: 'traveler',
+		rarity: 5,
 		name: 'Traveler',
 		element: 'anemo',
 		weapon_type: 'sword',
@@ -348,6 +377,7 @@ module.exports = {
 	venti: {
 		id: 'venti',
 		name: 'Venti',
+		rarity: 5,
 		element: 'anemo',
 		weapon_type: 'bow',
 		ascend: {
@@ -359,6 +389,7 @@ module.exports = {
 	},
 	xiangling: {
 		id: 'xiangling',
+		rarity: 4,
 		name: 'Xiangling',
 		element: 'pyro',
 		weapon_type: 'polearm',
@@ -371,6 +402,7 @@ module.exports = {
 	},
 	xiao: {
 		id: 'xiao',
+		rarity: 5,
 		name: 'Xiao',
 		element: 'anemo',
 		weapon_type: 'polearm',
@@ -383,6 +415,7 @@ module.exports = {
 	},
 	xingqiu: {
 		id: 'xingqiu',
+		rarity: 4,
 		name: 'Xingqiu',
 		element: 'hydro',
 		weapon_type: 'sword',
@@ -395,6 +428,7 @@ module.exports = {
 	},
 	xinyan: {
 		id: 'xinyan',
+		rarity: 4,
 		name: 'Xinyan',
 		element: 'pyro',
 		weapon_type: 'claymore',
@@ -407,6 +441,7 @@ module.exports = {
 	},
 	yanfei: {
 		id: 'yanfei',
+		rarity: 4,
 		name: 'Yanfei',
 		element: 'pyro',
 		weapon_type: 'catalyst',
@@ -419,6 +454,7 @@ module.exports = {
 	},
 	yoimiya: {
 		id: 'yoimiya',
+		rarity: 5,
 		name: 'Yoimiya',
 		ascend: {
 			local: 'naku_weed',
@@ -429,6 +465,7 @@ module.exports = {
 	},
 	zhongli: {
 		id: 'zhongli',
+		rarity: 5,
 		name: 'Zhongli',
 		element: 'geo',
 		weapon_type: 'polearm',
@@ -441,6 +478,7 @@ module.exports = {
 	},
 	baal: {
 		id: 'baal',
+		rarity: 5,
 		name: 'Raiden Shogun Baal',
 		element: 'electro',
 		weapon_type: 'polearm',
@@ -453,6 +491,7 @@ module.exports = {
 	},
 	sara: {
 		id: 'sara',
+		rarity: 4,
 		name: 'Kujou Sara',
 		element: 'electro',
 		weapon_type: 'bow',
