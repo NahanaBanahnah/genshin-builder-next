@@ -1,18 +1,25 @@
 import Head from 'next/head'
 import Nav from '../components/Nav/Nav'
 import Build from '../components/Build/Build'
-
 import Builds from '../data/builds'
+import Character from '../data/characters'
 
 const Home = () => {
 	// GLOBAL STATE
 
 	// BUILD ARRAYS
-	const buildArray = [...Builds]
+	const buildArray = Builds.map(ele => {
+		const obj = { ...ele }
+		obj.rarity = Character[ele.id].rarity
+		obj.name = Character[ele.id].name
+		return obj
+	})
 
 	buildArray.sort(
 		(a, b) =>
-			-b.element.localeCompare(a.element) || -b.id.localeCompare(a.id)
+			a.element.localeCompare(b.element) ||
+			b.rarity - a.rarity ||
+			a.id.localeCompare(b.id)
 	)
 
 	return (
