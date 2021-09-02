@@ -439,4 +439,28 @@ module.exports = {
 			common: 'slime',
 		},
 	},
+	baal: {
+		id: 'baal',
+		name: 'Raiden Shogun Baal',
+		element: 'electro',
+		weapon_type: 'polearm',
+		ascend: {
+			local: 'amakumo_fruit',
+			gem: 'vajrada_amethyst',
+			boss: 'storm_beads',
+			common: 'handguard',
+		},
+	},
+	sara: {
+		id: 'sara',
+		name: 'Kujou Sara',
+		element: 'electro',
+		weapon_type: 'bow',
+		ascend: {
+			local: 'dendrobium',
+			gem: 'vajrada_amethyst',
+			boss: 'storm_beads',
+			common: 'handguard',
+		},
+	},
 }

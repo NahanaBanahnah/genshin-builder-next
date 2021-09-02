@@ -1181,7 +1181,21 @@ module.exports = {
 		name: 'Prototype Starglitter',
 		type: 'polearm',
 		rarity: 4,
-		baseAttack: 4,
+		baseAttack: 42,
+		subStat: 'Energy Recharge',
+	},
+	engulfing_lightning: {
+		name: 'Engulfing Lightning',
+		type: 'polearm',
+		rarity: 5,
+		baseAttack: 46,
+		subStat: 'Energy Recharge',
+	},
+	the_catch: {
+		name: 'the_catch',
+		type: 'polearm',
+		rarity: 4,
+		baseAttack: 42,
 		subStat: 'Energy Recharge',
 	},
 }

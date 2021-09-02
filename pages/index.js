@@ -10,6 +10,11 @@ const Home = () => {
 	// BUILD ARRAYS
 	const buildArray = [...Builds]
 
+	buildArray.sort(
+		(a, b) =>
+			-b.element.localeCompare(a.element) || -b.id.localeCompare(a.id)
+	)
+
 	return (
 		<>
 			<Head>
