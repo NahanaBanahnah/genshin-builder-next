@@ -9,9 +9,10 @@ const Home = () => {
 
 	// BUILD ARRAYS
 	const buildArray = Builds.map(ele => {
-		ele.rarity = Character[ele.id].rarity
-		ele.name = Character[ele.id].name
-		return ele
+		const obj = { ...ele }
+		obj.rarity = Character[ele.id].rarity
+		obj.name = Character[ele.id].name
+		return obj
 	})
 
 	buildArray.sort(

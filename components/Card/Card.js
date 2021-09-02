@@ -99,7 +99,7 @@ Card.propTypes = {
 	caption: PropTypes.bool,
 	rarity: PropTypes.number.isRequired,
 	mapId: PropTypes.oneOfType([
-		PropTypes.string,
+		PropTypes.number,
 		PropTypes.bool,
 		PropTypes.instanceOf(Array),
 	]),
