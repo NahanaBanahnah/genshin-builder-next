@@ -143,7 +143,14 @@ const Build = ({
 				<h2>{name}</h2>
 			</div>
 			<div className="ascend">
-				<Ascend ascend={Characters[id].ascend} />
+				<Ascend
+					local={Characters[id].ascend.local}
+					gem={Characters[id].ascend.gem}
+					boss={Characters[id].ascend.boss}
+					common={Characters[id].ascend.common}
+					book={Characters[id].talent.book}
+					weekly={Characters[id].talent.boss}
+				/>
 			</div>
 		</div>
 	) : null

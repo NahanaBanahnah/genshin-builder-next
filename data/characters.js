@@ -11,6 +11,11 @@ module.exports = {
 			boss: 'basalt_pillar',
 			common: 'scroll',
 		},
+		talent: {
+			boss: 'tusk_of_monoceros_caeli',
+			common: 'scroll',
+			book: 'ballad',
+		},
 	},
 	amber: {
 		id: 'amber',
@@ -23,6 +28,11 @@ module.exports = {
 			gem: 'agnidus_agate',
 			boss: 'everflame_seed',
 			common: 'arrowhead',
+		},
+		talent: {
+			boss: 'dvalins_sigh',
+			common: 'arrowhead',
+			book: 'freedom',
 		},
 	},
 	ayaka: {
@@ -37,6 +47,11 @@ module.exports = {
 			boss: 'perpetual_heart',
 			common: 'handguard',
 		},
+		talent: {
+			boss: 'bloodjade_branch',
+			common: 'handguard',
+			book: 'elegance',
+		},
 	},
 	barbara: {
 		id: 'barbara',
@@ -49,6 +64,11 @@ module.exports = {
 			gem: 'varunada_lazurite',
 			boss: 'cleansing_heart',
 			common: 'scroll',
+		},
+		talent: {
+			boss: 'ring_of_boreas',
+			common: 'scroll',
+			book: 'freedom',
 		},
 	},
 	beidou: {
@@ -63,6 +83,11 @@ module.exports = {
 			boss: 'lightning_prism',
 			common: 'insignia',
 		},
+		talent: {
+			boss: 'dvalins_sigh',
+			common: 'insignia',
+			book: 'gold',
+		},
 	},
 	bennett: {
 		id: 'bennett',
@@ -75,6 +100,11 @@ module.exports = {
 			gem: 'agnidus_agate',
 			boss: 'everflame_seed',
 			common: 'insignia',
+		},
+		talent: {
+			boss: 'dvalins_plume',
+			common: 'insignia',
+			book: 'resistance',
 		},
 	},
 	chongyun: {
@@ -89,6 +119,11 @@ module.exports = {
 			boss: 'hoarfrost_core',
 			common: 'mask',
 		},
+		talent: {
+			boss: 'dvalins_sigh',
+			common: 'mask',
+			book: 'diligence',
+		},
 	},
 	diluc: {
 		id: 'diluc',
@@ -101,6 +136,11 @@ module.exports = {
 			gem: 'agnidus_agate',
 			boss: 'everflame_seed',
 			common: 'finsignia',
+		},
+		talent: {
+			boss: 'dvalins_plume',
+			common: 'finsignia',
+			book: 'resistance',
 		},
 	},
 	diona: {
@@ -115,6 +155,11 @@ module.exports = {
 			boss: 'hoarfrost_core',
 			common: 'arrowhead',
 		},
+		talent: {
+			boss: 'shard_of_a_foul_legacy',
+			common: 'arrowhead',
+			book: 'freedom',
+		},
 	},
 	eula: {
 		id: 'eula',
@@ -127,6 +172,11 @@ module.exports = {
 			gem: 'shivada_jade',
 			boss: 'crystalline_bloom',
 			common: 'mask',
+		},
+		talent: {
+			boss: 'dragon_lords_crown',
+			common: 'mask',
+			book: 'resistance',
 		},
 	},
 	fischl: {
@@ -141,6 +191,11 @@ module.exports = {
 			boss: 'lightning_prism',
 			common: 'arrowhead',
 		},
+		talent: {
+			boss: 'spirit_locket_of_boreas',
+			common: 'arrowhead',
+			book: 'ballad',
+		},
 	},
 	ganyu: {
 		id: 'ganyu',
@@ -153,6 +208,11 @@ module.exports = {
 			gem: 'shivada_jade',
 			boss: 'hoarfrost_core',
 			common: 'nectar',
+		},
+		talent: {
+			boss: 'shadow_of_the_warrior',
+			common: 'nectar',
+			book: 'diligence',
 		},
 	},
 	hu_tao: {
@@ -167,6 +227,11 @@ module.exports = {
 			boss: 'juvenile_jade',
 			common: 'nectar',
 		},
+		talent: {
+			boss: 'shard_of_a_foul_legacy',
+			common: 'nectar',
+			book: 'diligence',
+		},
 	},
 	jean: {
 		id: 'jean',
@@ -179,6 +244,11 @@ module.exports = {
 			gem: 'vayuda_turquoise',
 			boss: 'hurricane_seed',
 			common: 'mask',
+		},
+		talent: {
+			boss: 'dvalins_plume',
+			common: 'mask',
+			book: 'resistance',
 		},
 	},
 	kaeya: {
@@ -193,6 +263,11 @@ module.exports = {
 			boss: 'hoarfrost_core',
 			common: 'insignia',
 		},
+		talent: {
+			boss: 'spirit_locket_of_boreas',
+			common: 'insignia',
+			book: 'ballad',
+		},
 	},
 	kazuha: {
 		id: 'kazuha',
@@ -205,6 +280,11 @@ module.exports = {
 			gem: 'vayuda_turquoise',
 			boss: 'marionette_core',
 			common: 'insignia',
+		},
+		talent: {
+			boss: 'gilded_scale',
+			common: 'insignia',
+			book: 'diligence',
 		},
 	},
 	keqing: {
@@ -219,6 +299,11 @@ module.exports = {
 			boss: 'lightning_prism',
 			common: 'nectar',
 		},
+		talent: {
+			boss: 'ring_of_boreas',
+			common: 'nectar',
+			book: 'prosperity',
+		},
 	},
 	klee: {
 		id: 'klee',
@@ -231,6 +316,11 @@ module.exports = {
 			gem: 'agnidus_agate',
 			boss: 'everflame_seed',
 			common: 'scroll',
+		},
+		talent: {
+			boss: 'ring_of_boreas',
+			common: 'scroll',
+			book: 'freedom',
 		},
 	},
 	lisa: {
@@ -245,6 +335,11 @@ module.exports = {
 			boss: 'lightning_prism',
 			common: 'slime',
 		},
+		talent: {
+			boss: 'dvalins_claw',
+			common: 'slime',
+			book: 'ballad',
+		},
 	},
 	mona: {
 		id: 'mona',
@@ -257,6 +352,11 @@ module.exports = {
 			gem: 'varunada_lazurite',
 			boss: 'cleansing_heart',
 			common: 'nectar',
+		},
+		talent: {
+			boss: 'ring_of_boreas',
+			common: 'nectar',
+			book: 'resistance',
 		},
 	},
 	ningguang: {
@@ -271,6 +371,11 @@ module.exports = {
 			boss: 'basalt_pillar',
 			common: 'finsignia',
 		},
+		talent: {
+			boss: 'spirit_locket_of_boreas',
+			common: 'finsignia',
+			book: 'prosperity',
+		},
 	},
 	noelle: {
 		id: 'noelle',
@@ -283,6 +388,11 @@ module.exports = {
 			gem: 'prithiva_topaz',
 			boss: 'basalt_pillar',
 			common: 'mask',
+		},
+		talent: {
+			boss: 'dvalins_claw',
+			common: 'mask',
+			book: 'resistance',
 		},
 	},
 	qiqi: {
@@ -297,6 +407,11 @@ module.exports = {
 			boss: 'hoarfrost_core',
 			common: 'scroll',
 		},
+		talent: {
+			boss: 'tail_of_boreas',
+			common: 'scroll',
+			book: 'prosperity',
+		},
 	},
 	razor: {
 		id: 'razor',
@@ -309,6 +424,11 @@ module.exports = {
 			gem: 'vajrada_amethyst',
 			boss: 'lightning_prism',
 			common: 'mask',
+		},
+		talent: {
+			boss: 'dvalins_claw',
+			common: 'mask',
+			book: 'resistance',
 		},
 	},
 	rosaria: {
@@ -323,6 +443,11 @@ module.exports = {
 			boss: 'hoarfrost_core',
 			common: 'finsignia',
 		},
+		talent: {
+			boss: 'shadow_of_the_warrior',
+			common: 'finsignia',
+			book: 'ballad',
+		},
 	},
 	sayu: {
 		id: 'sayu',
@@ -333,6 +458,11 @@ module.exports = {
 			gem: 'vayuda_turquoise',
 			boss: 'marionette_core',
 			common: 'nectar',
+		},
+		talent: {
+			boss: 'gilded_scale',
+			common: 'nectar',
+			book: 'light',
 		},
 	},
 	sucrose: {
@@ -347,6 +477,11 @@ module.exports = {
 			boss: 'hurricane_seed',
 			common: 'nectar',
 		},
+		talent: {
+			boss: 'spirit_locket_of_boreas',
+			common: 'nectar',
+			book: 'freedom',
+		},
 	},
 	tartaglia: {
 		id: 'tartaglia',
@@ -359,6 +494,11 @@ module.exports = {
 			gem: 'varunada_lazurite',
 			boss: 'cleansing_heart',
 			common: 'finsignia',
+		},
+		talent: {
+			boss: 'shard_of_a_foul_legacy',
+			common: 'finsignia',
+			book: 'freedom',
 		},
 	},
 	traveler: {
@@ -373,6 +513,11 @@ module.exports = {
 			boss: null,
 			common: 'mask',
 		},
+		talent: {
+			boss: 'dvalins_sigh',
+			common: 'mask',
+			book: 'freedom', // revisit
+		},
 	},
 	venti: {
 		id: 'venti',
@@ -385,6 +530,11 @@ module.exports = {
 			gem: 'vayuda_turquoise',
 			boss: 'hurricane_seed',
 			common: 'slime',
+		},
+		talent: {
+			boss: 'tail_of_boreas',
+			common: 'slime',
+			book: 'ballad',
 		},
 	},
 	xiangling: {
@@ -399,6 +549,11 @@ module.exports = {
 			boss: 'everflame_seed',
 			common: 'slime',
 		},
+		talent: {
+			boss: 'dvalins_claw',
+			common: 'slime',
+			book: 'diligence',
+		},
 	},
 	xiao: {
 		id: 'xiao',
@@ -411,6 +566,11 @@ module.exports = {
 			gem: 'vayuda_turquoise',
 			boss: 'juvenile_jade',
 			common: 'slime',
+		},
+		talent: {
+			boss: 'shadow_of_the_warrior',
+			common: 'slime',
+			book: 'prosperity',
 		},
 	},
 	xingqiu: {
@@ -425,6 +585,11 @@ module.exports = {
 			boss: 'cleansing_heart',
 			common: 'mask',
 		},
+		talent: {
+			boss: 'tail_of_boreas',
+			common: 'mask',
+			book: 'gold',
+		},
 	},
 	xinyan: {
 		id: 'xinyan',
@@ -437,6 +602,11 @@ module.exports = {
 			gem: 'agnidus_agate',
 			boss: 'everflame_seed',
 			common: 'insignia',
+		},
+		talent: {
+			boss: 'tusk_of_monoceros_caeli',
+			common: 'insignia',
+			book: 'gold',
 		},
 	},
 	yanfei: {
@@ -451,6 +621,11 @@ module.exports = {
 			boss: 'juvenile_jade',
 			common: 'insignia',
 		},
+		talent: {
+			boss: 'bloodjade_branch',
+			common: 'insignia',
+			book: 'gold',
+		},
 	},
 	yoimiya: {
 		id: 'yoimiya',
@@ -461,6 +636,11 @@ module.exports = {
 			gem: 'agnidus_agate',
 			boss: 'smoldering_pearl',
 			common: 'scroll',
+		},
+		talent: {
+			boss: 'dragon_lords_crown',
+			common: 'scroll',
+			book: 'transience',
 		},
 	},
 	zhongli: {
@@ -475,6 +655,11 @@ module.exports = {
 			boss: 'basalt_pillar',
 			common: 'slime',
 		},
+		talent: {
+			boss: 'tusk_of_monoceros_caeli',
+			common: 'slime',
+			book: 'gold',
+		},
 	},
 	baal: {
 		id: 'baal',
@@ -488,6 +673,11 @@ module.exports = {
 			boss: 'storm_beads',
 			common: 'handguard',
 		},
+		talent: {
+			boss: 'molten_moment',
+			common: 'handguard',
+			book: 'light',
+		},
 	},
 	sara: {
 		id: 'sara',
@@ -500,6 +690,11 @@ module.exports = {
 			gem: 'vajrada_amethyst',
 			boss: 'storm_beads',
 			common: 'handguard',
+		},
+		talent: {
+			boss: 'ashen_heart',
+			common: 'handguard',
+			book: 'elegance',
 		},
 	},
 }
