@@ -4,9 +4,9 @@ import Build from '../components/Build/Build'
 import Builds from '../data/builds'
 import Character from '../data/characters'
 
-const Home = () => {
-	// GLOBAL STATE
+// REMOVE
 
+const Home = () => {
 	// BUILD ARRAYS
 	const buildArray = Builds.map(ele => {
 		const obj = { ...ele }

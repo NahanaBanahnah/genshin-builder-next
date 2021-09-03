@@ -31,7 +31,7 @@ const Card = ({ qty, size, type, id, rarity, name, caption, mapId }) => {
 
 	const WIDTH = styles[`${size}Px`]
 	const MATERIAL_SRC =
-		type === 'gem' || type === 'common'
+		type === 'gem' || type === 'common' || type === 'book'
 			? `/img/${type}/${id}_${rarity}.webp`
 			: `/img/${type}/${id}.webp`
 
