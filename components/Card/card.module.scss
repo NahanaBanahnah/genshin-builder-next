@@ -3,12 +3,12 @@
 $ratio: 1.21;
 $ratioCrop: 0.83;
 $small: 36;
-$med: 44;
+$med: 48;
 $large: 112;
 
 $sizes: (
 	'small': $small,
-	'med': 84px,
+	'med': $med,
 	'large': 112px,
 );
 
@@ -16,7 +16,7 @@ $sizes: (
 	ratio: $ratio;
 	ratioCrop: $ratioCrop;
 	smallPx: $small;
-	med: $med;
+	medPx: $med;
 	large: $large;
 }
 
@@ -28,16 +28,40 @@ div.card {
 	opacity: 0.75;
 	transform: scale(1);
 	transition: all 0.125s ease-in-out;
+
+	div.imageHolder {
+		position: relative;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		overflow: hidden;
+	}
+
+	span.qty {
+		display: flex;
+		background-color: #e9e5dc;
+		color: rgba(0, 0, 0, 0.75);
+		font-size: 0.7rem;
+		font-weight: bold;
+		line-height: 0.7rem;
+		padding: 2px;
+		justify-content: center;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+	span.caption {
+		font-size: 0.7rem;
+		text-align: center;
+	}
+}
+div.card.noQty {
+	div.imageHolder {
+		border-radius: 4px;
+	}
 }
 div.card:hover {
 	opacity: 1;
 	transform: scale(1.125);
 	filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.2));
-}
-div.imageHolder {
-	position: relative;
-	border-radius: 4px;
-	overflow: hidden;
 }
 
 @each $name, $size in $sizes {
@@ -60,11 +84,9 @@ div.imageHolder {
 				height: $size - 8px;
 			}
 		}
-	}
-	div.card.#{$name}.noQty {
-		div.imageHolder {
-			align-items: flex-start;
-			height: math.round($size * $ratioCrop) + px;
+
+		span.qty {
+			width: $size + px;
 		}
 	}
 }
