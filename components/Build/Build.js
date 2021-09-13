@@ -1,7 +1,9 @@
 import React, { useState, useContext, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import PropTypes from 'prop-types'
+// import { Transition } from 'react-transition-group'
 
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import { GlobalStateContext } from '../../context/GlobalContextProvider'
 
 import Characters from '../../data/characters'
@@ -9,7 +11,8 @@ import Characters from '../../data/characters'
 import Artifacts from '../Artifacts/Artifacts'
 import Stats from '../Stats/Stats'
 import Weapons from '../Weapons/Weapons'
-import Ascend from '../Ascend/Ascend'
+import LevelPreview from '../Level/LevelPreview'
+import LevelDetails from '../Level/LevelDetails'
 
 const Build = ({
 	id,
@@ -39,10 +42,19 @@ const Build = ({
 	const CLASS = ['main', element]
 	const [FILTERED, setFilter] = useState(false)
 
+	const [SHOW_DETAILS, setDetailsView] = useState(false)
+	const toggleDetailView = () => setDetailsView(value => !value)
+
+	const DETAILS_CLASS = ['levelDetails']
+	if (SHOW_DETAILS) {
+		DETAILS_CLASS.push('showing')
+		CLASS.push('showing')
+	}
+
 	// ====== CB for windowing
 	const VIS_CALLBACK = entries => {
 		const [ENTRY] = entries
-		if (ENTRY.intersectionRatio <= 0.5) {
+		if (ENTRY.intersectionRatio <= 0.1) {
 			setIsVisible(false)
 		} else {
 			setIsVisible(true)
@@ -142,15 +154,46 @@ const Build = ({
 			<div className="characterName">
 				<h2>{name}</h2>
 			</div>
-			<div className="ascend">
-				<Ascend
-					local={Characters[id].ascend.local}
-					gem={Characters[id].ascend.gem}
-					boss={Characters[id].ascend.boss}
-					common={Characters[id].ascend.common}
-					book={Characters[id].talent.book}
-					weekly={Characters[id].talent.boss}
-				/>
+			<div className="levelPreview">
+				<div className="ascendCards">
+					<LevelPreview
+						local={Characters[id].ascend.local}
+						gem={Characters[id].ascend.gem}
+						boss={Characters[id].ascend.boss}
+						common={Characters[id].ascend.common}
+						book={Characters[id].talent.book}
+						weekly={Characters[id].talent.boss}
+					/>
+					<button
+						type="button"
+						className={SHOW_DETAILS ? 'showing' : null}
+						onClick={toggleDetailView}
+					>
+						<ChevronRightIcon fontSize="small" />
+						{SHOW_DETAILS ? 'Hide Details' : 'Show Details'}
+					</button>
+				</div>
+			</div>
+			<div className={DETAILS_CLASS.join(' ')}>
+				{SHOW_DETAILS && (
+					<>
+						<div className="levelHeader">Ascension Levels</div>
+						<div className="levelHeader">Talent Levels</div>
+						<LevelDetails
+							local={Characters[id].ascend.local}
+							common={Characters[id].ascend.common}
+							gem={Characters[id].ascend.gem}
+							boss={Characters[id].ascend.boss}
+							levelType="ascend"
+						/>
+						<LevelDetails
+							book={Characters[id].talent.book}
+							common={Characters[id].ascend.common}
+							weekly={Characters[id].talent.boss}
+							levelType="talent"
+						/>
+					</>
+				)}
 			</div>
 		</div>
 	) : null

@@ -30,6 +30,7 @@ const Card = ({ qty, size, type, id, rarity, name, caption, mapId }) => {
 		'https://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=en-us#/map/2?shown_types='
 
 	const WIDTH = styles[`${size}Px`]
+
 	const MATERIAL_SRC =
 		type === 'gem' || type === 'common' || type === 'book'
 			? `/img/${type}/${id}_${rarity}.webp`
@@ -55,8 +56,8 @@ const Card = ({ qty, size, type, id, rarity, name, caption, mapId }) => {
 					/>
 				</div>
 			</div>
-
-			{caption && <h2>{name}</h2>}
+			{qty && <span className={styles.qty}>{qty}</span>}
+			{caption && <span className={styles.caption}>{name}</span>}
 		</div>
 	)
 

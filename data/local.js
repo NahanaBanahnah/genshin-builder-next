@@ -4,7 +4,7 @@ module.exports = {
 		mapId: 35,
 	},
 	small_lamp_grass: {
-		name: 'Small lamp_grass',
+		name: 'Small Lamp Grass',
 		mapId: 33,
 	},
 	sakura_bloom: {
