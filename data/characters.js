@@ -216,7 +216,7 @@ module.exports = {
 		},
 	},
 	hu_tao: {
-		id: 'hu tao',
+		id: 'hu_tao',
 		rarity: 5,
 		name: 'Hu Tao',
 		element: 'pyro',
