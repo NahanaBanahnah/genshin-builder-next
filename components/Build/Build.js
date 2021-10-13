@@ -34,8 +34,6 @@ const Build = ({
 		LEVEL_DETAILS,
 	} = useContext(GlobalStateContext)
 
-	console.log(CHARACTER_STATE)
-
 	// ========== Set Up Windowing
 	const REF = useRef(null)
 	const [IS_VISIBLE, setIsVisible] = useState(true)
