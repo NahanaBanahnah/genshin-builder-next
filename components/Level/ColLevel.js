@@ -1,11 +1,12 @@
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt'
 import PropTypes from 'prop-types'
+import styles from './level.module.scss'
 
 const ColLevel = ({ phase, fade }) => {
-	const CLASS = ['rowContainer']
+	const CLASS = [styles.rowContainer, 'alternateChild']
 
 	if (fade) {
-		CLASS.push('fade')
+		CLASS.push(styles.fade)
 	}
 	return (
 		<div className={CLASS.join(' ')}>

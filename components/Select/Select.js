@@ -1,4 +1,6 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
+import { useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import PropTypes from 'prop-types'
 import TextField from '@material-ui/core/TextField'
 import Autocomplete from '@material-ui/lab/Autocomplete'
@@ -14,18 +16,30 @@ const Select = ({
 	groupBy,
 	sort,
 }) => {
-	const [SIZE, setSize] = useState(size)
+	const THEME = useTheme()
+	const XS = useMediaQuery(THEME.breakpoints.down('xs'))
+	const MD = useMediaQuery(THEME.breakpoints.down('md'))
+
+	const MOBILE_SIZE = XS ? '100%' : '75%'
+	const CLOSE_SIZE = MD ? MOBILE_SIZE : size
+	const OPEN_SIZE = MD ? MOBILE_SIZE : menuSize
+
+	const [SIZE, setSize] = useState(CLOSE_SIZE)
 	const REF = useRef(null)
 
 	const CustomPopper = props => (
 		<Popper
 			// eslint-disable-next-line react/jsx-props-no-spreading
 			{...props}
-			style={{ width: menuSize }}
+			style={{ width: OPEN_SIZE }}
 			placement="bottom-start"
 			disablePortal
 		/>
 	)
+
+	useEffect(() => {
+		setSize(CLOSE_SIZE)
+	}, [CLOSE_SIZE, MD])
 
 	return (
 		<div className="field" ref={REF}>
@@ -42,8 +56,8 @@ const Select = ({
 				style={{ width: SIZE, transition: 'all 0.25s ease' }}
 				autoHighlight
 				onChange={(event, value) => onChangeFunction(value)}
-				onOpen={() => setSize(menuSize)}
-				onClose={() => setSize(size)}
+				onOpen={() => setSize(OPEN_SIZE)}
+				onClose={() => setSize(CLOSE_SIZE)}
 				renderInput={params => (
 					<TextField
 						// eslint-disable-next-line react/jsx-props-no-spreading
@@ -66,8 +80,9 @@ Select.defaultProps = {
 Select.propTypes = {
 	name: PropTypes.string.isRequired,
 	options: PropTypes.instanceOf(Array).isRequired,
-	size: PropTypes.number.isRequired,
-	menuSize: PropTypes.number.isRequired,
+	size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+	menuSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+		.isRequired,
 	label: PropTypes.string.isRequired,
 	onChangeFunction: PropTypes.func.isRequired,
 	sort: PropTypes.string,

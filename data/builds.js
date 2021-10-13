@@ -157,13 +157,7 @@ module.exports = [
 		sand: ['elemental_mastery', 'energy_recharge'],
 		glass: ['anemo_dmg_bonus'],
 		crown: ['elemental_mastery', 'crit_rate', 'crit_dmg'],
-		sub: [
-			'atkp',
-			'crit_dmg',
-			'crit_rate',
-			'elemental_mastery',
-			'energy_recharge',
-		],
+		sub: ['atkp', 'crit_dmg', 'crit_rate', 'elemental_mastery'],
 	},
 	{
 		id: 'sayu',
@@ -224,7 +218,7 @@ module.exports = [
 	{
 		id: 'eula',
 		element: 'cryo',
-		build: 'Physical Main DPS ALTERNATIVE',
+		build: 'Physical Main DPS ALT',
 		artifact: [
 			{
 				id: 'bloodstained_chivalry',
@@ -826,19 +820,14 @@ module.exports = [
 	{
 		id: 'ningguang',
 		element: 'geo',
-		build: 'Geo Burst DPS ALTERNATIVE',
+		build: 'Geo Burst DPS ALT',
 		artifact: [
 			{
 				id: 'archaic_petra',
 				amount: 4,
 			},
 		],
-		weapon: [
-			'skyward_atlas',
-			'solar_pearl',
-			'memory_of_dust',
-			'eye_of_perception',
-		],
+		weapon: ['skyward_atlas', 'solar_pearl', 'memory_of_dust'],
 		sand: ['atkp'],
 		glass: ['geo_dmg_bonus'],
 		crown: ['atkp', 'crit_rate', 'crit_dmg'],
@@ -858,12 +847,7 @@ module.exports = [
 				amount: 2,
 			},
 		],
-		weapon: [
-			'staff_of_homa',
-			'primordial_jade_winged_spear',
-			'deathmatch',
-			'prototype_starglitter',
-		],
+		weapon: ['staff_of_homa', 'primordial_jade_winged_spear', 'deathmatch'],
 		sand: ['atkp', 'energy_recharge'],
 		glass: ['geo_dmg_bonus', 'atkp'],
 		crown: ['crit_rate', 'crit_dmg'],

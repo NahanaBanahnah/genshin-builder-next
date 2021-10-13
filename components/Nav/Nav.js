@@ -1,126 +1,71 @@
-import { useContext } from 'react'
-import Select from '../Select/Select'
+import { useState } from 'react'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
+import CloseIcon from '@material-ui/icons/Close'
+import { useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
-import { GlobalDispatchContext } from '../../context/GlobalContextProvider'
+import Filter from './Filter'
 
-import Artifacts from '../../data/artifacts'
-import Characters from '../../data/characters'
-import Stats from '../../data/stats'
-import Weapons from '../../data/weapons'
+import styles from './nav.module.scss'
 
 const Nav = () => {
-	const dispatch = useContext(GlobalDispatchContext)
+	const [SHOW_DRAWER, setDrawerView] = useState(false)
 
-	const CHARACTER_OPTIONS = Object.values(Characters).map(ele => ({
-		id: ele.id,
-		name: ele.name,
-	}))
-	const WEAPON_OPTIONS = Object.entries(Weapons).map(ele => ({
-		id: ele[0],
-		name: ele[1].name,
-		type: ele[1].type.toUpperCase(),
-	}))
+	const THEME = useTheme()
+	const XS = useMediaQuery(THEME.breakpoints.down('md'))
 
-	const stats = [...Stats]
-	stats.sort((a, b) => a.name.localeCompare(b.name))
+	const toggleDrawer = () => setDrawerView(!SHOW_DRAWER)
+	const DRAWER_CLASS = [styles.drawer]
+	const HAMB_CLASS = [styles.icon]
+	const CLOSE_CLASS = [styles.icon]
 
-	let sandOptions = stats.filter(ele => ele.set.some(g => g === 'sand'))
-	let glassOptions = stats.filter(ele => ele.set.some(g => g === 'glass'))
-	let crownOptions = stats.filter(ele => ele.set.some(g => g === 'crown'))
-
-	sandOptions = sandOptions.map(v => ({ ...v, type: 'sand' }))
-	glassOptions = glassOptions.map(v => ({ ...v, type: 'glass' }))
-	crownOptions = crownOptions.map(v => ({ ...v, type: 'crown' }))
-
-	const setArtifact = obj => {
-		const value = obj ? obj.id : null
-
-		dispatch({ type: 'SET_ARTIFACT', payload: value })
+	if (SHOW_DRAWER) {
+		DRAWER_CLASS.push(styles.show)
+		CLOSE_CLASS.push(styles.on)
 	}
-
-	const setWeapon = obj => {
-		const value = obj ? obj.id : null
-
-		dispatch({ type: 'SET_WEAPON', payload: value })
-	}
-
-	const setCharacter = obj => {
-		const value = obj ? obj.id : null
-		dispatch({ type: 'SET_CHARACTER', payload: value })
-	}
-
-	const setStat = obj => {
-		const value = obj ? {} : null
-		if (value) {
-			value.type = obj.type
-			value.stat = obj.id
-		}
-
-		dispatch({ type: 'SET_STAT', payload: value })
+	if (!SHOW_DRAWER) {
+		HAMB_CLASS.push(styles.on)
 	}
 
 	return (
-		<nav>
-			<div className="container">
-				Filter
-				<Select
-					options={CHARACTER_OPTIONS}
-					title="name"
-					size={150}
-					menuSize={250}
-					onChangeFunction={e => setCharacter(e)}
-					label="Character"
-					name="character"
+		<>
+			<nav className={[styles.mainNav, 'topNav'].join(' ')}>
+				<div className={styles.container}>
+					{!XS && 'Filter'}
+					{XS && (
+						<IconButton
+							color="inherit"
+							aria-label="open drawer"
+							edge="start"
+							onClick={toggleDrawer}
+						>
+							<MenuIcon className={HAMB_CLASS.join(' ')} />
+							<CloseIcon className={CLOSE_CLASS.join(' ')} />
+						</IconButton>
+					)}
+					{!XS && <Filter />}
+				</div>
+			</nav>
+			{XS && (
+				<>
+					<div className={DRAWER_CLASS.join(' ')}>
+						<h2>Filter</h2>
+						<Filter />
+					</div>
+				</>
+			)}
+			{SHOW_DRAWER && (
+				<div
+					className={styles.lb}
+					style={{ animation: `fadeIn .25s` }}
+					onClick={toggleDrawer}
+					role="button"
+					tabIndex={0}
+					onKeyDown={XS ? () => toggleDrawer() : null}
 				/>
-				<Select
-					options={WEAPON_OPTIONS}
-					groupBy="type"
-					sort="type"
-					title="name"
-					size={150}
-					menuSize={250}
-					onChangeFunction={e => setWeapon(e)}
-					label="Weapon"
-					name="weapon"
-				/>
-				<Select
-					options={Artifacts}
-					title="name"
-					size={150}
-					menuSize={250}
-					onChangeFunction={e => setArtifact(e)}
-					label="Artifact"
-					name="artifact"
-				/>
-				<Select
-					options={sandOptions}
-					name="sand"
-					title="name"
-					size={150}
-					menuSize={250}
-					onChangeFunction={e => setStat(e)}
-					label="Sand"
-				/>
-				<Select
-					options={glassOptions}
-					name="glass"
-					size={150}
-					menuSize={250}
-					title="name"
-					onChangeFunction={e => setStat(e)}
-					label="Glass"
-				/>
-				<Select
-					options={crownOptions}
-					name="crown"
-					size={150}
-					menuSize={250}
-					title="name"
-					onChangeFunction={e => setStat(e)}
-					label="Crown"
-				/>
-			</div>
-		</nav>
+			)}
+		</>
 	)
 }
 

@@ -5,7 +5,7 @@ import VisibilityOffIcon from '@material-ui/icons/VisibilityOff'
 import PropTypes from 'prop-types'
 
 import Leveling from '../../data/leveling'
-
+import styles from './level.module.scss'
 import ColLevel from './ColLevel'
 import ColCost from './ColCost'
 import ColMaterial from './ColMaterial'
@@ -73,7 +73,11 @@ const LevelDetails = ({ ...props }) => {
 
 		const VIEW_BUTTON = (
 			<div
-				className="view rowContainer"
+				className={[
+					styles.view,
+					styles.rowContainer,
+					styles.alternateChild,
+				].join(' ')}
 				onClick={() => setThisRow(key)}
 				onKeyPress={() => setThisRow(key)}
 				role="button"
@@ -122,16 +126,23 @@ const LevelDetails = ({ ...props }) => {
 	})
 
 	return (
-		<div>
+		<div className={props.class}>
 			<TableHeader type={props.levelType} />
-			<div className="ascendRow">{JSX}</div>
+			<div className={[styles.ascendRow, 'alternate'].join(' ')}>
+				{JSX}
+			</div>
 			<TableFooter type={props.levelType} totals={TOTALS} />
 		</div>
 	)
 }
 
+LevelDetails.defaultProps = {
+	class: null,
+}
+
 LevelDetails.propTypes = {
 	levelType: PropTypes.string.isRequired,
+	class: PropTypes.string,
 }
 
 export default LevelDetails

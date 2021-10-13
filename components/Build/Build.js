@@ -1,18 +1,18 @@
 import React, { useState, useContext, useEffect, useRef } from 'react'
-import Image from 'next/image'
 import PropTypes from 'prop-types'
-// import { Transition } from 'react-transition-group'
+import { useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
-import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import { GlobalStateContext } from '../../context/GlobalContextProvider'
+import ConditionalWrapper from '../ConditionalWrapper/ConditionalWrapper'
 
 import Characters from '../../data/characters'
 
+import Character from '../Character/Character'
 import Artifacts from '../Artifacts/Artifacts'
-import Stats from '../Stats/Stats'
 import Weapons from '../Weapons/Weapons'
-import LevelPreview from '../Level/LevelPreview'
-import LevelDetails from '../Level/LevelDetails'
+import Level from '../Level/Level'
+import StatContainer from '../Stats/StatContainer'
 
 const Build = ({
 	id,
@@ -26,28 +26,36 @@ const Build = ({
 	crown,
 	subStats,
 }) => {
-	const { ARTIFACT_STATE, CHARACTER_STATE, STAT_STATE, WEAPON_STATE } =
-		useContext(GlobalStateContext)
+	const {
+		ARTIFACT_STATE,
+		CHARACTER_STATE,
+		STAT_STATE,
+		WEAPON_STATE,
+		LEVEL_DETAILS,
+	} = useContext(GlobalStateContext)
 
 	// ========== Set Up Windowing
 	const REF = useRef(null)
 	const [IS_VISIBLE, setIsVisible] = useState(true)
 
-	// ========== Image Loading
-	const IMG = `/img/characters/${id}.webp`
-	const [IMG_LOADED, setLoaded] = useState(false)
-	const IMG_CLASS = IMG_LOADED ? 'show' : 'hide'
+	const THEME = useTheme()
+	const MD = useMediaQuery(THEME.breakpoints.down('md'))
 
 	// ====== Set the class and set up filtering
 	const CLASS = ['main', element]
 	const [FILTERED, setFilter] = useState(false)
 
-	const [SHOW_DETAILS, setDetailsView] = useState(false)
-	const toggleDetailView = () => setDetailsView(value => !value)
+	const [MOBILE_DETAILS, setMobileDetails] = useState(false)
 
-	const DETAILS_CLASS = ['levelDetails']
-	if (SHOW_DETAILS) {
-		DETAILS_CLASS.push('showing')
+	if (MOBILE_DETAILS) {
+		CLASS.push('mobileShowing')
+	}
+
+	const toggleMobileView = () => {
+		setMobileDetails(!MOBILE_DETAILS)
+	}
+
+	if (LEVEL_DETAILS[`${id}-${build}`]) {
 		CLASS.push('showing')
 	}
 
@@ -66,7 +74,7 @@ const Build = ({
 		const CURRENT = REF.current
 		const OPTIONS = {
 			root: null,
-			rootMargin: '64px',
+			rootMargin: '16px',
 			threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
 		}
 		const OBSERVER = new IntersectionObserver(VIS_CALLBACK, OPTIONS)
@@ -126,75 +134,49 @@ const Build = ({
 	// If its in view load html into container
 	const HTML = IS_VISIBLE ? (
 		<div className="holder" style={{ animation: `fadeIn 1s` }}>
-			<div className="build" style={{ animation: `fadeIn 1s` }}>
-				<h1>{build}</h1>
-			</div>
-			<div className="character" style={{ animation: `fadeIn 1s` }}>
-				<div className="bg">
-					<Image
-						className={IMG_CLASS}
-						src={IMG}
-						layout="fill"
-						objectFit="cover"
-						alt={id}
-						quality={75}
-						objectPosition="top"
-						placeholder="blur"
-						blurDataURL={`/_next/image?url=${IMG}&w=32&q=10`}
-						onLoad={() => setLoaded(true)}
-					/>
+			{/* if its mobile we wrap the header in its own div */}
+			<ConditionalWrapper
+				condition={MD}
+				wrapper={children => (
+					<div
+						className="headContainer"
+						onClick={MD ? () => toggleMobileView() : null}
+						onKeyDown={MD ? () => toggleMobileView() : null}
+						role={MD ? 'button' : null}
+					>
+						{children}
+					</div>
+				)}
+			>
+				{/* if its mobile this becomes a button */}
+				<div className="build">
+					<h1>{build}</h1>
 				</div>
-			</div>
-			<Weapons weapons={weapon} />
-			<Artifacts artifact={artifactArray} />
-			<Stats artifact="sand" stats={sand} />
-			<Stats artifact="glass" stats={glass} />
-			<Stats artifact="crown" stats={crown} />
-			<Stats stat="Sub Stats" stats={subStats} />
-			<div className="characterName">
-				<h2>{name}</h2>
-			</div>
-			<div className="levelPreview">
-				<div className="ascendCards">
-					<LevelPreview
+				<Character id={id} name={name} />
+			</ConditionalWrapper>
+			{((MD && MOBILE_DETAILS) || !MD) && (
+				<>
+					<Weapons weapons={weapon} />
+					<Artifacts artifact={artifactArray} />
+
+					<StatContainer
+						sand={sand}
+						glass={glass}
+						crown={crown}
+						subStats={subStats}
+					/>
+
+					<Level
 						local={Characters[id].ascend.local}
 						gem={Characters[id].ascend.gem}
 						boss={Characters[id].ascend.boss}
 						common={Characters[id].ascend.common}
 						book={Characters[id].talent.book}
 						weekly={Characters[id].talent.boss}
+						buildId={`${id}-${build}`}
 					/>
-					<button
-						type="button"
-						className={SHOW_DETAILS ? 'showing' : null}
-						onClick={toggleDetailView}
-					>
-						<ChevronRightIcon fontSize="small" />
-						{SHOW_DETAILS ? 'Hide Details' : 'Show Details'}
-					</button>
-				</div>
-			</div>
-			<div className={DETAILS_CLASS.join(' ')}>
-				{SHOW_DETAILS && (
-					<>
-						<div className="levelHeader">Ascension Levels</div>
-						<div className="levelHeader">Talent Levels</div>
-						<LevelDetails
-							local={Characters[id].ascend.local}
-							common={Characters[id].ascend.common}
-							gem={Characters[id].ascend.gem}
-							boss={Characters[id].ascend.boss}
-							levelType="ascend"
-						/>
-						<LevelDetails
-							book={Characters[id].talent.book}
-							common={Characters[id].ascend.common}
-							weekly={Characters[id].talent.boss}
-							levelType="talent"
-						/>
-					</>
-				)}
-			</div>
+				</>
+			)}
 		</div>
 	) : null
 

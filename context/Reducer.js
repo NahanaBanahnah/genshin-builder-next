@@ -30,6 +30,11 @@ const Reducer = (state, action) => {
 				...state,
 				BUILD: action.payload,
 			}
+		case 'SET_LEVEL_DETAILS':
+			return {
+				...state,
+				LEVEL_DETAILS: { ...state.LEVEL_DETAILS, ...action.payload },
+			}
 
 		default:
 			return state

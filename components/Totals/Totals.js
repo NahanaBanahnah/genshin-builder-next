@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import styles from './totals.module.scss'
+import levelStyles from '../Level/level.module.scss'
 
 const Totals = ({ type, obj }) => {
 	const RATE = {
@@ -24,7 +25,7 @@ const Totals = ({ type, obj }) => {
 			)
 		})
 	}
-	return <div className="ascendRowFooter">{totals}</div>
+	return <div className={levelStyles.ascendRowFooter}>{totals}</div>
 }
 
 Totals.propTypes = {

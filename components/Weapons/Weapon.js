@@ -1,9 +1,15 @@
 import { useState } from 'react'
+import { useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 import Weapons from '../../data/weapons'
 
 const Weapon = ({ id }) => {
+	const theme = useTheme()
+	const LG = useMediaQuery(theme.breakpoints.down('lg'))
+
 	const { name, rarity } = Weapons[id]
 
 	const RATE = {
@@ -15,14 +21,15 @@ const Weapon = ({ id }) => {
 	const IMG_CLASS = LOADED ? 'show' : 'hide'
 
 	const IMG = `/img/weapons/${id}.webp`
+	const IMG_SIZE = LG ? 32 : 48
 	return (
 		<>
 			<Image
 				className={IMG_CLASS}
 				src={IMG}
 				alt={id}
-				width={48}
-				height={48}
+				width={IMG_SIZE}
+				height={IMG_SIZE}
 				placeholder="blur"
 				blurDataURL={`/_next/image?url=${IMG}&w=32&q=10`}
 				onLoad={() => setLoaded(true)}

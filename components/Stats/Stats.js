@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { GlobalStateContext } from '../../context/GlobalContextProvider'
 
 import StatList from '../../data/stats'
+import styles from './stats.module.scss'
 
 const Stats = ({ artifact, stats, stat }) => {
 	const { STAT_STATE } = useContext(GlobalStateContext)
@@ -21,12 +22,14 @@ const Stats = ({ artifact, stats, stat }) => {
 		stat
 	)
 	return (
-		<div className="stats">
-			<div className="title">{TITLE}</div>
+		<div className={styles.stats}>
+			<div className={[styles.title, 'elementColor1-BG'].join(' ')}>
+				{TITLE}
+			</div>
 			<div>&nbsp;</div>
 
 			{stats.map(s => {
-				const STAT_CLASS = ['stat']
+				const STAT_CLASS = [styles.stat]
 				const { name, id } = StatList.find(e => e.id === s)
 
 				if (

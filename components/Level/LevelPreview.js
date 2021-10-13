@@ -1,4 +1,7 @@
 import PropTypes from 'prop-types'
+import { useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+
 import Card from '../Card/Card'
 
 import Leveling from '../../data/leveling'
@@ -8,11 +11,14 @@ const Ascend = ({ ...props }) => {
 		defaults: { ASCEND_TEMPLATE, LEVEL_TEMPLATE },
 	} = Leveling
 
+	const theme = useTheme()
+	const xs = useMediaQuery(theme.breakpoints.down('xs'))
+
 	const CARD_ARRAY = [...ASCEND_TEMPLATE, ...LEVEL_TEMPLATE]
 
 	return (
 		<>
-			<h3>Materials</h3>
+			{!xs && <h3>Materials</h3>}
 			{CARD_ARRAY.map(({ type, rarity, obj, map }) => {
 				let name = null
 				let mapId = false
