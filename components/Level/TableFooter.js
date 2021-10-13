@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types'
 import Totals from '../Totals/Totals'
+import styles from './level.module.scss'
 
 const TableFooter = ({
 	type,
 	totals: { mora, gem, boss, local, common, book, weekly, crown },
 }) => (
-	<div className="ascendRow">
-		<div className="ascendRowFooter" />
-		<div className="ascendRowFooter">Totals</div>
+	<div className={styles.ascendRow}>
+		<div className={styles.ascendRowFooter} />
+		<div className={styles.ascendRowFooter}>Totals</div>
 		<Totals type="mora" obj={mora} />
 
 		{type === 'ascend' && (

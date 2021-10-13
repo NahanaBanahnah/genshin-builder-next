@@ -599,7 +599,7 @@ module.exports = {
 			"HP increased by 20%/25%/30%/35%/40%. Additionally, provides an ATK Bonus based on 1.2%/1.5%/1.8%/2.1%/2.4% of the wielder's Max HP.",
 	},
 	primordial_jade_winged_spear: {
-		name: 'Primordial Jade Winged_Spear',
+		name: 'Primordial Jade Winged Spear',
 		type: 'polearm',
 		rarity: 5,
 		baseAttack: 48,

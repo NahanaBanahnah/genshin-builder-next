@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
+import styles from './level.module.scss'
 
 const TableHeader = ({ type }) => (
-	<div className="ascendRowHeader">
+	<div className={styles.ascendRowHeader}>
 		<div />
 		<div>Level</div>
 		<div>Mora</div>

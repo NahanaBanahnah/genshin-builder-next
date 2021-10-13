@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
 import Card from '../Card/Card'
+import styles from './level.module.scss'
 
 const ColMaterial = ({ id, type, rarity, obj, qty, fade }) => {
-	const CLASS = ['rowContainer']
+	const CLASS = [styles.rowContainer, 'alternateChild']
 
 	if (fade) {
-		CLASS.push('fade')
+		CLASS.push(styles.fade)
 	}
 	let name
 	if (id) {

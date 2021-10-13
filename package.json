@@ -22,7 +22,8 @@
     "react-tooltip": "^4.2.21",
     "react-transition-group": "^4.4.2",
     "sass": "^1.37.5",
-    "sharp": "^0.28.3"
+    "sharp": "^0.28.3",
+    "swiper": "^7.0.6"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

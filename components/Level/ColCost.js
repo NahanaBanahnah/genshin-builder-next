@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
+import styles from './level.module.scss'
 
 const ColCost = ({ cost, fade }) => {
-	const CLASS = ['rowContainer']
+	const CLASS = [styles.rowContainer, 'alternateChild']
 	if (fade) {
-		CLASS.push('fade')
+		CLASS.push(styles.fade)
 	}
 	return (
 		<div className={CLASS.join(' ')}>

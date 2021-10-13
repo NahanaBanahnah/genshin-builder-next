@@ -8,6 +8,7 @@ const initialState = {
 	STAT_STATE: null,
 	ARTIFACT_STATE: false,
 	CHARACTER_STATE: null,
+	LEVEL_DETAILS: false,
 }
 
 const GlobalContextProvider = ({ children }) => {
