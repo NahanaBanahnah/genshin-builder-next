@@ -722,8 +722,8 @@ module.exports = {
 		element: 'cryo',
 		weapon_type: 'bow',
 		ascend: {
-			local: 'crystal_marrow ',
-			gem: 'vajrada_jade ',
+			local: 'crystal_marrow',
+			gem: 'shivada_jade',
 			boss: 'crystalline_bloom',
 			common: 'spectral',
 		},
