@@ -697,4 +697,40 @@ module.exports = {
 			book: 'elegance',
 		},
 	},
+	kokomi: {
+		id: 'kokomi',
+		rarity: 5,
+		name: 'Kokomi',
+		element: 'hydro',
+		weapon_type: 'catalyst',
+		ascend: {
+			local: 'sango_pearl',
+			gem: 'varunada_lazurite',
+			boss: 'dew_of_repudiation',
+			common: 'spectral',
+		},
+		talent: {
+			boss: 'hellfire_butterfly',
+			common: 'handguard',
+			book: 'transience',
+		},
+	},
+	aloy: {
+		id: 'aloy',
+		rarity: 5,
+		name: 'Aloy',
+		element: 'cryo',
+		weapon_type: 'bow',
+		ascend: {
+			local: 'crystal_marrow ',
+			gem: 'vajrada_jade ',
+			boss: 'crystalline_bloom',
+			common: 'spectral',
+		},
+		talent: {
+			boss: 'molten_moment',
+			common: 'handguard',
+			book: 'freedom',
+		},
+	},
 }

@@ -47,4 +47,10 @@ module.exports = {
 		3: 'Slime Concentrate',
 		mapId: 59,
 	},
+	spectral: {
+		1: 'Spectral Husk',
+		2: 'Spectral Heart',
+		3: 'Spectral Nucleus',
+		mapId: 229,
+	},
 }

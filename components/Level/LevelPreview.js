@@ -24,6 +24,7 @@ const Ascend = ({ ...props }) => {
 				let mapId = false
 				const ID = props[type]
 
+				console.log(obj[ID], ID, 'asdfasd', obj)
 				if (obj[ID]) {
 					name = ['gem', 'common', 'book'].includes(type)
 						? obj[ID][rarity]

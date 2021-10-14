@@ -87,4 +87,8 @@ module.exports = {
 		name: 'Dendrobium',
 		mapId: 198,
 	},
+	sango_pearl: {
+		name: 'Sango Pearl',
+		mapId: 227,
+	},
 }
