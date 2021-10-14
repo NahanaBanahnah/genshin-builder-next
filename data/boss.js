@@ -35,4 +35,10 @@ module.exports = {
 	storm_beads: {
 		name: 'Storm Beads',
 	},
+	dew_of_repudiation: {
+		name: 'Dew of Repudiation',
+	},
+	molten_moment: {
+		name: 'Molten Moment',
+	},
 }

@@ -1192,10 +1192,17 @@ module.exports = {
 		subStat: 'Energy Recharge',
 	},
 	the_catch: {
-		name: 'the_catch',
+		name: 'The Catch',
 		type: 'polearm',
 		rarity: 4,
 		baseAttack: 42,
 		subStat: 'Energy Recharge',
+	},
+	everlasting_moonglow: {
+		name: 'Everlasting Moonglow',
+		type: 'catalyst',
+		rarity: 5,
+		baseAttack: 46,
+		subStat: 'HP',
 	},
 }

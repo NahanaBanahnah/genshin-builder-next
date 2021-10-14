@@ -22,7 +22,7 @@ module.exports = {
 	},
 	varunada_lazurite: {
 		2: 'Varunada Lazurite Sliver',
-		3: 'Varunada Lzurite Fragment',
+		3: 'Varunada Lazurite Fragment',
 		4: 'Varunada Lazurite Chunk',
 		5: 'Varunada Lazurite Gemstone',
 		mapId: [136],

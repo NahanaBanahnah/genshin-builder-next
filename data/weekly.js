@@ -41,4 +41,7 @@ module.exports = {
 	ashen_heart: {
 		name: 'Ashen Heart',
 	},
+	hellfire_butterfly: {
+		name: 'Hellfire Butterfly ',
+	},
 }
